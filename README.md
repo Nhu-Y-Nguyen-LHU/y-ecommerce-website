@@ -80,4 +80,4 @@ npm run start
 
 Bản quyền hiện tại: Copyright (c) 2026 Nguyễn Thị Như Ý. All rights reserved.
 
-Dự án được điều chỉnh và phát triển dựa trên nền tảng giao diện Shofy - Beauty & Cosmetics để phục vụ mục tiêu học tập và triển khai.
+Dự án được điều chỉnh và phát triển dựa trên nền tảng [giao diện Shofy - Beauty & Cosmetics] (https://github.com/Hamed-Hasan/shofy-Beauty-and-Cosmetics-ecommerce-client) để phục vụ mục tiêu học tập và triển khai.
