@@ -3,7 +3,8 @@ import React, { useEffect } from "react";
 
 function BackToTopCom({ cls }) {
   useEffect(() => {
-    BackToTop(".back-to-top-wrapper");
+    const cleanup = BackToTop(".back-to-top-wrapper");
+    return cleanup;
   },[]);
   return (
     <div className={`back-to-top-wrapper ${cls || ""}`}>

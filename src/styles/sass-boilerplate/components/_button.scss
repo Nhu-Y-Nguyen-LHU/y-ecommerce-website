@@ -1,0 +1,25 @@
+@use "../abstracts" as abstracts;
+
+.sbp-theme .tp-btn,
+.sbp-theme .tp-login-btn,
+.sbp-theme .tp-checkout-btn,
+.sbp-theme .tp-cart-checkout-btn,
+.sbp-theme .tp-cart-update-btn,
+.sbp-theme .tp-invoice-print {
+  transition: all 0.2s ease;
+}
+
+.sbp-theme .tp-btn:hover,
+.sbp-theme .tp-login-btn:hover,
+.sbp-theme .tp-checkout-btn:hover,
+.sbp-theme .tp-cart-checkout-btn:hover,
+.sbp-theme .tp-cart-update-btn:hover,
+.sbp-theme .tp-invoice-print:hover {
+  transform: translateY(-1px);
+}
+
+.sbp-theme .tp-btn-border:hover,
+.sbp-theme .tp-btn-border-2:hover {
+  border-color: abstracts.$brand-color;
+  color: abstracts.$brand-color;
+}

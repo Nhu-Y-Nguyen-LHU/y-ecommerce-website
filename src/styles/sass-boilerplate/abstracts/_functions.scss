@@ -1,0 +1,15 @@
+// Sass functions adapted from sass-boilerplate.
+
+@use "variables" as *;
+
+@function asset($base, $type, $path) {
+  @return url($base + $type + $path);
+}
+
+@function image($path, $base: $base-url) {
+  @return asset($base, "images/", $path);
+}
+
+@function font($path, $base: $base-url) {
+  @return asset($base, "fonts/", $path);
+}

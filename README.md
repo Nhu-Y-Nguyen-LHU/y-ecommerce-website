@@ -76,6 +76,43 @@ npm run build
 npm run start
 ```
 
+## Tự động deploy lên Vercel bằng GitHub Actions
+
+Workflow đã được thêm tại [.github/workflows/vercel-deploy.yml](.github/workflows/vercel-deploy.yml).
+
+Luồng chạy:
+
+- Pull Request vào main/master: tạo preview deploy trên Vercel.
+- Push vào main/master: deploy production.
+
+Các GitHub Secrets cần cấu hình trong repo:
+
+- VERCEL_TOKEN
+- VERCEL_ORG_ID
+- VERCEL_PROJECT_ID
+
+Lấy giá trị secrets:
+
+1. Cài Vercel CLI và đăng nhập:
+
+```bash
+npm i -g vercel
+vercel login
+```
+
+2. Trong thư mục dự án, chạy lệnh để link project:
+
+```bash
+vercel link
+```
+
+3. Sau khi link, lấy:
+
+- VERCEL_ORG_ID và VERCEL_PROJECT_ID trong file .vercel/project.json
+- VERCEL_TOKEN tại Vercel Dashboard > Settings > Tokens
+
+Sau khi thêm đủ secrets, chỉ cần push code lên nhánh main/master là workflow tự deploy.
+
 ## Bản quyền
 
 Bản quyền hiện tại: Copyright (c) 2026 Nguyễn Thị Như Ý. All rights reserved.

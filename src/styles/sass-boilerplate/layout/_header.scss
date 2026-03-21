@@ -1,0 +1,24 @@
+@use "../abstracts" as abstracts;
+
+.sbp-theme .tp-header-area {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+}
+
+.sbp-theme .tp-header-sticky.header-sticky,
+.sbp-theme .tp-header-sticky-area.header-sticky-2 {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.sbp-theme .tp-header-action-btn,
+.sbp-theme .tp-offcanvas-open-btn {
+  transition: color 0.2s ease;
+
+  @include abstracts.on-event {
+    color: abstracts.$brand-color;
+  }
+}
+
+.sbp-theme .tp-header-action-badge {
+  background: abstracts.$brand-color;
+}

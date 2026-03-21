@@ -28,8 +28,6 @@ const useCheckoutSubmit = () => {
   const { shipping_info } = useSelector((state) => state.order);
   // total amount
   const { total, setTotal } = useCartInfo();
-  // couponInfo
-  const [couponInfo, setCouponInfo] = useState({});
   //cartTotal
   const [cartTotal, setCartTotal] = useState("");
   // minimumAmount
@@ -60,13 +58,12 @@ const useCheckoutSubmit = () => {
 
   const {register,handleSubmit,setValue,formState: { errors }} = useForm();
 
-  let couponRef = useRef("");
+  const couponRef = useRef("");
 
   useEffect(() => {
     if (localStorage.getItem("couponInfo")) {
       const data = localStorage.getItem("couponInfo");
       const coupon = JSON.parse(data);
-      setCouponInfo(coupon);
       setDiscountPercentage(coupon.discountPercentage);
       setMinimumAmount(coupon.minimumAmount);
       setDiscountProductType(coupon.productType);
@@ -104,8 +101,6 @@ const useCheckoutSubmit = () => {
     discountPercentage,
     cart_products,
     discountProductType,
-    discountAmount,
-    cartTotal,
   ]);
 
   // create payment intent
@@ -188,7 +183,7 @@ const useCheckoutSubmit = () => {
     setValue("contactNo", shipping_info.contactNo);
     setValue("email", shipping_info.email);
     setValue("orderNote", shipping_info.orderNote);
-  }, [user, setValue, shipping_info, router]);
+  }, [setValue, shipping_info]);
 
   // submitHandler
   const submitHandler = async (data) => {

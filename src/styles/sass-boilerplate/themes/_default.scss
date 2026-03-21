@@ -1,0 +1,6 @@
+@use "../abstracts" as abstracts;
+
+.sbp-theme {
+  --sbp-brand-color: #{abstracts.$brand-color};
+  --sbp-text-color: #{abstracts.$text-color};
+}

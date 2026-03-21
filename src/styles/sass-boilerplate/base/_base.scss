@@ -1,0 +1,22 @@
+@use "../abstracts" as abstracts;
+
+// Minimal safe reset scoped to wrapper to avoid global conflicts.
+.sbp-theme {
+  color: abstracts.$text-color;
+}
+
+.sbp-theme * ,
+.sbp-theme *::before,
+.sbp-theme *::after {
+  box-sizing: border-box;
+}
+
+.sbp-theme a {
+  color: abstracts.$brand-color;
+  text-decoration: none;
+
+  @include abstracts.on-event {
+    color: abstracts.$text-color;
+    text-decoration: underline;
+  }
+}

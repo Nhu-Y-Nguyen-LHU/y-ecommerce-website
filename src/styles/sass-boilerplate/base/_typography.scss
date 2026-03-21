@@ -1,0 +1,10 @@
+@use "../abstracts" as abstracts;
+
+.sbp-theme {
+  font-family: abstracts.$text-font-stack;
+}
+
+.sbp-theme code,
+.sbp-theme pre {
+  font-family: abstracts.$code-font-stack;
+}

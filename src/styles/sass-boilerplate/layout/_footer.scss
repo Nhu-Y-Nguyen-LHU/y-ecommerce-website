@@ -1,0 +1,25 @@
+@use "../abstracts" as abstracts;
+
+.sbp-theme .tp-footer-area {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.sbp-theme .tp-footer-widget-title {
+  color: abstracts.$dark-grey;
+}
+
+.sbp-theme .tp-footer-desc,
+.sbp-theme .tp-footer-widget-content a,
+.sbp-theme .tp-footer-contact-content a {
+  color: abstracts.$mid-grey;
+}
+
+.sbp-theme .tp-footer-widget-content a:hover,
+.sbp-theme .tp-footer-contact-content a:hover,
+.sbp-theme .tp-footer-social a:hover {
+  color: abstracts.$brand-color;
+}
+
+.sbp-theme .tp-footer-bottom {
+  border-top: 1px solid abstracts.$light-grey;
+}

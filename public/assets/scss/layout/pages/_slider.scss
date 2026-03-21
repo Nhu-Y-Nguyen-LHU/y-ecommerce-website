@@ -496,6 +496,20 @@
         & a{
             @include animation-control(.7s);
         }
+
+        & .tp-btn-beauty-cta{
+            background-color: var(--tp-theme-secondary);
+            border-color: var(--tp-theme-secondary);
+            color: var(--tp-common-white);
+            box-shadow: 0 12px 30px rgba(230, 69, 126, 0.35);
+
+            &:hover{
+                background-color: var(--tp-common-white);
+                border-color: var(--tp-common-white);
+                color: var(--tp-common-black);
+                box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+            }
+        }
     }
     &-feature{
         &-3{
