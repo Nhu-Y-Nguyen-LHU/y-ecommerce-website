@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
@@ -10,18 +10,17 @@ import ErrorMsg from '../common/error-msg';
 import { useLoginUserMutation } from '@/redux/features/auth/authApi';
 import { notifyError, notifySuccess } from '@/utils/toast';
 
-
-// schema
 const schema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),
   password: Yup.string().required().min(6).label("Password"),
 });
+
 const LoginForm = () => {
   const [showPass, setShowPass] = useState(false);
   const [loginUser, { }] = useLoginUserMutation();
   const router = useRouter();
   const { redirect } = router.query;
-  // react hook form
+
   const {
     register,
     handleSubmit,
@@ -30,32 +29,31 @@ const LoginForm = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  // onSubmit
+
   const onSubmit = (data) => {
     loginUser({
       email: data.email,
       password: data.password,
-    })
-      .then((data) => {
-        if (data?.data) {
-          notifySuccess("Login successfully");
-          router.push(redirect || "/");
-        }
-        else {
-          notifyError(data?.error?.data?.error)
-        }
-      })
+    }).then((res) => {
+      if (res?.data) {
+        notifySuccess("Đăng nhập thanh cong");
+        router.push(redirect || "/");
+      } else {
+        notifyError(res?.error?.data?.error || "Đăng nhập that bai");
+      }
+    });
     reset();
   };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="tp-login-input-wrapper">
         <div className="tp-login-input-box">
           <div className="tp-login-input">
-            <input {...register("email", { required: `Email is required!` })} name="email" id="email" type="email" placeholder="shofy@mail.com" />
+            <input {...register("email", { required: `Vui lòng nhập email` })} name="email" id="email" type="email" placeholder="ban@nymart.vn" />
           </div>
           <div className="tp-login-input-title">
-            <label htmlFor="email">Your Email</label>
+            <label htmlFor="email">Email</label>
           </div>
           <ErrorMsg msg={errors.email?.message} />
         </div>
@@ -63,10 +61,10 @@ const LoginForm = () => {
           <div className="p-relative">
             <div className="tp-login-input">
               <input
-                {...register("password", { required: `Password is required!` })}
+                {...register("password", { required: `Vui lòng nhập mật khẩu` })}
                 id="password"
                 type={showPass ? "text" : "password"}
-                placeholder="Min. 6 character"
+                placeholder="Tối thiểu 6 ký tự"
               />
             </div>
             <div className="tp-login-input-eye" id="password-show-toggle">
@@ -75,7 +73,7 @@ const LoginForm = () => {
               </span>
             </div>
             <div className="tp-login-input-title">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">Mat khau</label>
             </div>
           </div>
           <ErrorMsg msg={errors.password?.message}/>
@@ -84,17 +82,18 @@ const LoginForm = () => {
       <div className="tp-login-suggetions d-sm-flex align-items-center justify-content-between mb-20">
         <div className="tp-login-remeber">
           <input id="remeber" type="checkbox" />
-          <label htmlFor="remeber">Remember me</label>
+          <label htmlFor="remeber">Ghi nhớ đăng nhập</label>
         </div>
         <div className="tp-login-forgot">
-          <Link href="/forgot">Forgot Password?</Link>
+          <Link href="/forgot">Quên mật khẩu?</Link>
         </div>
       </div>
       <div className="tp-login-bottom">
-        <button type='submit' className="tp-login-btn w-100">Login</button>
+        <button type='submit' className="tp-login-btn w-100">Đăng nhập</button>
       </div>
     </form>
   );
 };
 
 export default LoginForm;
+

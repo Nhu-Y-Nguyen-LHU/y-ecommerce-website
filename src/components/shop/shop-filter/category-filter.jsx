@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 // internal
@@ -31,10 +31,10 @@ const CategoryFilter = ({setCurrPage,shop_right=false}) => {
     content = <ShopCategoryLoader loading={isLoading}/>;
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && categories?.result?.length === 0) {
-    content = <ErrorMsg msg="No Category found!" />;
+    content = <ErrorMsg msg="Không tìm thấy danh mục!" />;
   }
   if (!isLoading && !isError && categories?.result?.length > 0) {
     const category_items = categories.result;
@@ -70,3 +70,4 @@ const CategoryFilter = ({setCurrPage,shop_right=false}) => {
 };
 
 export default CategoryFilter;
+

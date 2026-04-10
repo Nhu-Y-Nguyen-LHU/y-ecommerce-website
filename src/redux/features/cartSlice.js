@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getLocalStorage, setLocalStorage } from "@/utils/localstorage";
 import { notifyError, notifySuccess } from "@/utils/toast";
+import { localizeProductTitle } from "@/utils/product-title-localization";
 
 const initialState = {
   cart_products: [],
@@ -20,7 +21,7 @@ export const cartSlice = createSlice({
           orderQuantity: state.orderQuantity,
         };
         state.cart_products.push(newItem);
-        notifySuccess(`${state.orderQuantity} ${payload.title} added to cart`);
+        notifySuccess(`Đã thêm ${state.orderQuantity} ${payload.title} vào giỏ hàng`);
       } else {
         state.cart_products.map((item) => {
           if (item._id === payload._id) {
@@ -29,9 +30,9 @@ export const cartSlice = createSlice({
                 state.orderQuantity !== 1
                   ? state.orderQuantity + item.orderQuantity
                   : item.orderQuantity + 1;
-              notifySuccess(`${state.orderQuantity} ${item.title} added to cart`);
+              notifySuccess(`Đã thêm ${state.orderQuantity} ${item.title} vào giỏ hàng`);
             } else {
-              notifyError("No more quantity available for this product!");
+              notifyError("Số lượng sản phẩm không đủ!");
               state.orderQuantity = 1;
             }
           }
@@ -65,16 +66,20 @@ export const cartSlice = createSlice({
         (item) => item._id !== payload.id
       );
       setLocalStorage("cart_products", state.cart_products);
-      notifyError(`${payload.title} Remove from cart`);
+      notifyError(`Đã xóa ${payload.title} khỏi giỏ hàng`);
     },
     get_cart_products: (state, action) => {
-      state.cart_products = getLocalStorage("cart_products");
+      const products = getLocalStorage("cart_products") || [];
+      state.cart_products = products.map((item) => ({
+        ...item,
+        title: localizeProductTitle(item.title),
+      }));
     },
     initialOrderQuantity: (state, { payload }) => {
       state.orderQuantity = 1;
     },
     clearCart:(state) => {
-      const isClearCart = window.confirm('Are you sure you want to remove all items ?');
+      const isClearCart = window.confirm('Bạn có chắc chắn muốn xóa toàn bộ sản phẩm trong giỏ hàng?');
       if(isClearCart){
         state.cart_products = []
       }

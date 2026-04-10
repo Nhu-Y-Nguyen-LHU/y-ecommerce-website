@@ -3,9 +3,6 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectFade, Pagination } from "swiper";
 // internal
-import slider_bg_1 from "@assets/img/slider/3/slider-1.jpg";
-import slider_bg_2 from "@assets/img/slider/3/slider-2.jpg";
-import slider_bg_3 from "@assets/img/slider/3/slider-3.jpg";
 import { ArrowNext, ArrowPrev, Cosmetics, Meckoup, VeganProduct } from "@/svg";
 
 // slider setting
@@ -28,21 +25,21 @@ const slider_setting = {
 const slider_data = [
   {
     id: 1,
-    bg: slider_bg_1,
-    subtitle: "Winter Collection 2023",
-    title: "Be your kind of beauty",
+    bg: "/background.jpg",
+    subtitle: "Bộ sưu tập mới tại NY - MART",
+    title: "Tinh tế trong từng lựa chọn",
   },
   {
     id: 2,
-    bg: slider_bg_2,
-    subtitle: "Top Brand Collection",
-    title: "Use the best for you.",
+    bg: "/background.jpg",
+    subtitle: "Ưu đãi thương hiệu nổi bật",
+    title: "Mua sắm chất lượng cho gia đình Việt",
   },
   {
     id: 3,
-    bg: slider_bg_3,
-    subtitle: "Awesome Beauty Products",
-    title: "Don't Worry for Skincare",
+    bg: "/background.jpg",
+    subtitle: "Chọn lọc sản phẩm được ưa chuộng",
+    title: "Thời trang, gia dụng, công nghệ",
   },
 ];
 
@@ -80,27 +77,27 @@ const BeautyBanner = () => {
             >
               <div
                 className="tp-slider-thumb-3 include-bg"
-                style={{ backgroundImage: `url(${item.bg.src})` }}
+                style={{ backgroundImage: `url(${item.bg})` }}
               ></div>
               <div className="container">
                 <div className="row align-items-center">
                   <div className="col-xl-6 col-lg-6 col-md-8">
-                    <div className="tp-slider-content-3">
-                      <span>Winter Collection 2023</span>
+                    <div className="tp-slider-content-3 p-relative z-index-3">
+                      <span>{item.subtitle}</span>
                       <h3 className="tp-slider-title-3">
-                        Be your kind of beauty
+                        {item.title}
                       </h3>
                       <div className="tp-slider-feature-3 d-flex flex-wrap align-items-center p-relative z-index-1 mb-15">
-                        <FeatureItem icon={<Cosmetics />} title={<>High-end <br /> Cosmetics</>} />
-                        <FeatureItem icon={<VeganProduct />} title={<>Vegan <br /> Product</>} />
-                        <FeatureItem icon={<Meckoup />} title={<>Express <br /> Make-up</>} />
+                        <FeatureItem icon={<Cosmetics />} title={<>Sản phẩm <br /> chính hãng</>} />
+                        <FeatureItem icon={<VeganProduct />} title={<>Ưu đãi <br /> mỗi ngày</>} />
+                        <FeatureItem icon={<Meckoup />} title={<>Giao nhanh <br /> toàn quốc</>} />
                       </div>
                       <div className="tp-slider-btn-3">
                         <Link
                           href="/shop"
                           className="tp-btn tp-btn-border tp-btn-border-white tp-btn-beauty-cta"
                         >
-                          Discover Now
+                          Khám phá ngay
                         </Link>
                       </div>
                     </div>

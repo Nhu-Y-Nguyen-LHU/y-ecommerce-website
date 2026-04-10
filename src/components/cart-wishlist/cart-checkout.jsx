@@ -18,27 +18,27 @@ const CartCheckout = () => {
   return (
     <div className="tp-cart-checkout-wrapper">
       <div className="tp-cart-checkout-top d-flex align-items-center justify-content-between">
-        <span className="tp-cart-checkout-top-title">Subtotal</span>
+        <span className="tp-cart-checkout-top-title">Tạm tính</span>
         <span className="tp-cart-checkout-top-price">${total}</span>
       </div>
       <div className="tp-cart-checkout-shipping">
-        <h4 className="tp-cart-checkout-shipping-title">Shipping</h4>
+        <h4 className="tp-cart-checkout-shipping-title">Vận chuyển</h4>
         <div className="tp-cart-checkout-shipping-option-wrapper">
           <div className="tp-cart-checkout-shipping-option">
             <input id="flat_rate" type="radio" name="shipping" />
             <label htmlFor="flat_rate" onClick={()=> handleShippingCost(20)}>
-              Flat rate: <span>$20.00</span>
+              Giáo tiêu chuẩn: <span>$20.00</span>
             </label>
           </div>
           <div className="tp-cart-checkout-shipping-option">
             <input id="local_pickup" type="radio" name="shipping" />
             <label htmlFor="local_pickup" onClick={()=> handleShippingCost(25)}>
-              Local pickup: <span> $25.00</span>
+              Giáo nhanh nội thành: <span> $25.00</span>
             </label>
           </div>
           <div className="tp-cart-checkout-shipping-option">
             <input id="free_shipping" type="radio" name="shipping" />
-            <label onClick={()=> handleShippingCost('free')} htmlFor="free_shipping">Free shipping</label>
+            <label onClick={()=> handleShippingCost('free')} htmlFor="free_shipping">Miễn phí vận chuyển</label>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@ const CartCheckout = () => {
       </div>
       <div className="tp-cart-checkout-proceed">
         <Link href="/checkout" className="tp-cart-checkout-btn w-100">
-          Proceed to Checkout
+          Tiến hành thanh toán
         </Link>
       </div>
     </div>

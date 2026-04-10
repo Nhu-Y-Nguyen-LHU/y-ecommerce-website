@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getLocalStorage, setLocalStorage } from "@/utils/localstorage";
 import { notifyError, notifySuccess } from "@/utils/toast";
+import { localizeProductTitle } from "@/utils/product-title-localization";
 
 const initialState = {
   compareItems: [],
@@ -16,12 +17,12 @@ export const compareSlice = createSlice({
       );
       if (!isExist) {
         state.compareItems.push(payload);
-        notifySuccess(`${payload.title} added to compare`);
+        notifySuccess(`Đã thêm ${payload.title} vào danh sách so sánh`);
       } else {
         state.compareItems = state.compareItems.filter(
           (item) => item._id !== payload._id
         );
-        notifyError(`${payload.title} removed from compare`);
+        notifyError(`Đã xóa ${payload.title} khỏi danh sách so sánh`);
       }
       setLocalStorage("compare_items", state.compareItems);
     },
@@ -30,10 +31,14 @@ export const compareSlice = createSlice({
         (item) => item._id !== payload.id
       );
       setLocalStorage("compare_items", state.compareItems);
-      notifyError(`${payload.title} removed from compare`);
+      notifyError(`Đã xóa ${payload.title} khỏi danh sách so sánh`);
     },
     get_compare_products: (state, { payload }) => {
-      state.compareItems = getLocalStorage("compare_items");
+      const products = getLocalStorage("compare_items") || [];
+      state.compareItems = products.map((item) => ({
+        ...item,
+        title: localizeProductTitle(item.title),
+      }));
     },
   },
 });

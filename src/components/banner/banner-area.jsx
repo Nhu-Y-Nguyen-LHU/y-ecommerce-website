@@ -19,14 +19,14 @@ function BannerItem({ sm = false, bg, title }) {
         style={{ backgroundImage: `url(${bg.src})` }}
       ></div>
       <div className="tp-banner-content">
-        {!sm && <span>Sale 20% off all store</span>}
+        {!sm && <span>Giảm 20% toàn bộ cửa hàng</span>}
         <h3 className="tp-banner-title">
           <Link href="/shop">{title}</Link>
         </h3>
-        {sm && <p>Sale 35% off</p>}
+        {sm && <p>Giảm đến 35%</p>}
         <div className="tp-banner-btn">
           <Link href="/shop" className="tp-link-btn">
-            Shop Now
+            Mua ngay
             <ArrowRight />
           </Link>
         </div>
@@ -45,7 +45,7 @@ const BannerArea = () => {
               bg={banner_1}
               title={
                 <>
-                  Smartphone <br /> BLU G91 Pro 2022
+                  Điện thoại thông minh <br /> BLU G91 Pro 2022
                 </>
               }
             />
@@ -56,7 +56,7 @@ const BannerArea = () => {
               bg={banner_2}
               title={
                 <>
-                  HyperX Cloud II <br /> Wireless
+                  HyperX Cloud II <br /> Không dây
                 </>
               }
             />

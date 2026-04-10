@@ -18,7 +18,7 @@ const BlogSidebar = () => {
           <div className="tp-sidebar-search">
             <form action="#">
               <div className="tp-sidebar-search-input">
-                <input type="text" placeholder="Search..." />
+                <input type="text" placeholder="Tìm kiếm..." />
                 <button type="submit">
                   <Search/>
                 </button>
@@ -29,7 +29,7 @@ const BlogSidebar = () => {
 
         {/* about  */}
         <div className="tp-sidebar-widget mb-35">
-          <h3 className="tp-sidebar-widget-title">About me</h3>
+          <h3 className="tp-sidebar-widget-title">Về tác giả</h3>
           <div className="tp-sidebar-widget-content">
             <div className="tp-sidebar-about">
               <div className="tp-sidebar-about-thumb mb-25">
@@ -39,10 +39,10 @@ const BlogSidebar = () => {
               </div>
               <div className="tp-sidebar-about-content">
                 <h3 className="tp-sidebar-about-title">
-                  <a href="#">Ravi {"O'Leigh"}</a>
+                  <a href="#">Biên tập viên NY - MART</a>
                 </h3>
-                <span className="tp-sidebar-about-designation">Photographer & Blogger</span>
-                <p>Lorem ligula eget dolor. Aenean massa. Cum sociis que penatibus magnis dis parturient</p>
+                <span className="tp-sidebar-about-designation">Chuyên viên nội dung TMĐT</span>
+                <p>Chia sẻ kinh nghiệm mua sắm thông minh và xu hướng tiêu dùng phù hợp với gia đình Việt.</p>
                 <div className="tp-sidebar-about-signature">
                   <Image src={signature} alt="signature" />
                 </div>
@@ -54,7 +54,7 @@ const BlogSidebar = () => {
 
         {/* <!-- latest post start --> */}
         <div className="tp-sidebar-widget mb-35">
-          <h3 className="tp-sidebar-widget-title">Latest Posts</h3>
+          <h3 className="tp-sidebar-widget-title">Bài viết mới nhất</h3>
           <div className="tp-sidebar-widget-content">
             <div className="tp-sidebar-blog-item-wrapper">
               {latest_post.map(b => (
@@ -81,15 +81,15 @@ const BlogSidebar = () => {
 
         {/* <!-- categories start --> */}
         <div className="tp-sidebar-widget widget_categories mb-35">
-          <h3 className="tp-sidebar-widget-title">Categories</h3>
+          <h3 className="tp-sidebar-widget-title">Chuyên mục</h3>
           <div className="tp-sidebar-widget-content">
             <ul>
-              <li><Link href="/blog">Farming <span>(12)</span></Link></li>
-              <li><Link href="/blog">Crisp Bread & Cake <span>(6)</span></Link></li>
-              <li><Link href="/blog">Milk & Meat <span>(2)</span></Link></li>
-              <li><Link href="/blog">Organic Fruits <span>(8)</span></Link></li>
-              <li><Link href="/blog">Sea Foods <span>(0)</span></Link></li>
-              <li><Link href="/blog">Vegetable <span>(3)</span></Link></li>
+              <li><Link href="/blog">Mẹo mua sắm <span>(12)</span></Link></li>
+              <li><Link href="/blog">Thời trang <span>(6)</span></Link></li>
+              <li><Link href="/blog">Gia dụng <span>(2)</span></Link></li>
+              <li><Link href="/blog">Công nghệ <span>(8)</span></Link></li>
+              <li><Link href="/blog">Khuyến mãi <span>(0)</span></Link></li>
+              <li><Link href="/blog">Đời sống <span>(3)</span></Link></li>
             </ul>
           </div>
         </div>
@@ -97,14 +97,14 @@ const BlogSidebar = () => {
 
         {/* <!-- tag cloud start --> */}
         <div className="tp-sidebar-widget mb-35">
-          <h3 className="tp-sidebar-widget-title">Popular Tags</h3>
+          <h3 className="tp-sidebar-widget-title">Thẻ phổ biến</h3>
           <div className="tp-sidebar-widget-content tagcloud">
-            <a href="#">Summer</a>
-            <a href="#">Vintage</a>
-            <a href="#">Sunglasses</a>
-            <a href="#">Organic Food</a>
-            <a href="#">Lifesttyle</a>
-            <a href="#">Nature</a>
+            <a href="#">Mùa hè</a>
+            <a href="#">Phong cách</a>
+            <a href="#">Phụ kiện</a>
+            <a href="#">Tiêu dùng xanh</a>
+            <a href="#">Lối sống</a>
+            <a href="#">Xu hướng</a>
           </div>
         </div>
         {/* <!-- tag cloud end --> */}

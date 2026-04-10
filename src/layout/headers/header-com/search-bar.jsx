@@ -2,30 +2,27 @@ import React from "react";
 import useSearchFormSubmit from "@/hooks/use-search-form-submit";
 
 const SearchBar = ({ isSearchOpen, setIsSearchOpen }) => {
-  const { setSearchText, setCategory, handleSubmit, searchText } =
-    useSearchFormSubmit();
+  const { setSearchText, setCategory, handleSubmit, searchText } = useSearchFormSubmit();
 
-  // selectHandle
   const handleCategory = (value) => {
     setCategory(value);
   };
 
-  const categories = ["electronics", "fashion", "beauty", "jewelry"];
+  const categories = [
+    { value: "electronics", label: "Công nghệ" },
+    { value: "fashion", label: "Thời trang" },
+    { value: "beauty", label: "Làm đẹp" },
+    { value: "jewelry", label: "Phụ kiện" },
+  ];
+
   return (
     <>
-      <section
-        className={`tp-search-area tp-search-style-brown ${
-          isSearchOpen ? "opened" : ""
-        }`}
-      >
+      <section className={`tp-search-area tp-search-style-brown ${isSearchOpen ? "opened" : ""}`}>
         <div className="container">
           <div className="row">
             <div className="col-xl-12">
               <div className="tp-search-form">
-                <div
-                  onClick={() => setIsSearchOpen(false)}
-                  className="tp-search-close text-center mb-20"
-                >
+                <div onClick={() => setIsSearchOpen(false)} className="tp-search-close text-center mb-20">
                   <button className="tp-search-close-btn tp-search-close-btn"></button>
                 </div>
                 <form onSubmit={handleSubmit}>
@@ -34,21 +31,17 @@ const SearchBar = ({ isSearchOpen, setIsSearchOpen }) => {
                       onChange={(e) => setSearchText(e.target.value)}
                       value={searchText}
                       type="text"
-                      placeholder="Search for product..."
+                      placeholder="Tìm sản phẩm bạn cần..."
                     />
                     <button type="submit">
                       <i className="flaticon-search-1"></i>
                     </button>
                   </div>
                   <div className="tp-search-category">
-                    <span>Search by : </span>
+                    <span>Tìm theo: </span>
                     {categories.map((c, i) => (
-                      <a
-                        key={i}
-                        onClick={() => handleCategory(c)}
-                        className="cursor-pointer"
-                      >
-                        {c}
+                      <a key={i} onClick={() => handleCategory(c.value)} className="cursor-pointer">
+                        {c.label}
                         {i < categories.length - 1 && ", "}
                       </a>
                     ))}
@@ -59,11 +52,7 @@ const SearchBar = ({ isSearchOpen, setIsSearchOpen }) => {
           </div>
         </div>
       </section>
-      {/* body overlay */}
-      <div
-        onClick={() => setIsSearchOpen(false)}
-        className={`body-overlay ${isSearchOpen ? "opened" : ""}`}
-      ></div>
+      <div onClick={() => setIsSearchOpen(false)} className={`body-overlay ${isSearchOpen ? "opened" : ""}`}></div>
     </>
   );
 };

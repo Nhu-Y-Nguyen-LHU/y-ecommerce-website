@@ -17,7 +17,7 @@ import FooterTwo from '@/layout/footers/footer-2';
 const HomeFour = () => {
   return (
     <Wrapper>
-      <SEO pageTitle="Home Four" />
+      <SEO pageTitle="Trang chủ phu kien" />
       <HeaderFour/>
       <JewelryBanner/>
       <FeatureAreaThree />

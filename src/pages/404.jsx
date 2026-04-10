@@ -23,14 +23,14 @@ const ErrorPage = () => {
                   <Image src={error} alt="error img" />
                 </div>
 
-                <h3 className="tp-error-title">Oops! Page not found</h3>
+                <h3 className="tp-error-title">Rất tiếc! Không tìm thấy trang</h3>
                 <p>
-                  Whoops, this is embarrassing. Looks like the page you were
-                  looking for was not found.
+                  Trang bạn đang tìm kiếm không tồn tại hoặc đã được di chuyển.
+                  Vui lòng quay lại trang chủ để tiếp tục mua sắm.
                 </p>
 
                 <Link href="/" className="tp-error-btn">
-                  Back to Home
+                  Về trang chủ
                 </Link>
               </div>
             </div>
@@ -44,3 +44,4 @@ const ErrorPage = () => {
 };
 
 export default ErrorPage;
+

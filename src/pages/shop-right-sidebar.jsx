@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import SEO from "@/components/seo";
 import Wrapper from "@/layout/wrapper";
 import HeaderTwo from "@/layout/headers/header-2";
@@ -54,10 +54,10 @@ const ShopRightSidebarPage = ({ query }) => {
     content = <ShopLoader loading={isLoading} shopRight={true}/>;
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No Products found!" />;
+    content = <ErrorMsg msg="Không tìm thấy sản phẩm!" />;
   }
   if (!isLoading && !isError && products?.data?.length > 0) {
     // products
@@ -141,9 +141,9 @@ const ShopRightSidebarPage = ({ query }) => {
   }
   return (
     <Wrapper>
-      <SEO pageTitle="Shop" />
+      <SEO pageTitle="Mua sắm" />
       <HeaderTwo style_2={true} />
-      <ShopBreadcrumb title="Shop Right Sidebar" subtitle="Shop Right Sidebar" />
+      <ShopBreadcrumb title="Mua sắm - Thanh lọc phải" subtitle="Mua sắm - Thanh lọc phải" />
       {content}
       <Footer primary_style={true} />
     </Wrapper>
@@ -161,3 +161,5 @@ export const getServerSideProps = async (context) => {
     },
   };
 };
+
+

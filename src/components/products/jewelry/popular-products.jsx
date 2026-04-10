@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Scrollbar } from 'swiper';
 // internal
@@ -56,10 +56,10 @@ const PopularProducts = () => {
     );
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No Products found!" />;
+    content = <ErrorMsg msg="Không tìm thấy sản phẩm!" />;
   }
   if (!isLoading && !isError && products?.data?.length > 0) {
     const product_items = products.data.slice(0, 8);
@@ -80,8 +80,8 @@ const PopularProducts = () => {
           <div className="row">
             <div className="col-xl-12">
               <div className="tp-section-title-wrapper-4 mb-60 text-center">
-                <span className="tp-section-title-pre-4">Shop by Category</span>
-                <h3 className="tp-section-title-4">Popular on the Shofy store.</h3>
+                <span className="tp-section-title-pre-4">Danh mục nổi bật</span>
+                <h3 className="tp-section-title-4">Sản phẩm được ưa chuộng tại NY - MART.</h3>
               </div>
             </div>
           </div>

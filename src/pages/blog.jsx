@@ -9,7 +9,7 @@ import BlogPostboxArea from "@/components/blog/blog-postox/blog-postbox-area";
 const BlogPostBoxPage = () => {
   return (
     <Wrapper>
-      <SEO pageTitle="Blog" />
+      <SEO pageTitle="Tin tức" />
       <HeaderTwo style_2={true} />
       <BlogBreadcrumb/>
       <BlogPostboxArea/>
@@ -19,3 +19,4 @@ const BlogPostBoxPage = () => {
 };
 
 export default BlogPostBoxPage;
+

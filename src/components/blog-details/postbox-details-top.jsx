@@ -16,7 +16,7 @@ const PostboxDetailsTop = ({blog}) => {
       <div className="tp-postbox-details-meta mb-50">
         <span data-meta="author">
           <UserTwo />
-          By <a href="#">{" "}{author}</a>
+          Tác giả <a href="#">{" "}{author}</a>
         </span>
         <span>
           <Date />
@@ -24,7 +24,7 @@ const PostboxDetailsTop = ({blog}) => {
         </span>
         <span>
           <Comment />
-          <a href="#">Comments ({comments})</a>
+          <a href="#">Bình luận ({comments})</a>
         </span>
       </div>
     </div>

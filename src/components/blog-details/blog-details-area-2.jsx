@@ -35,7 +35,7 @@ const BlogDetailsAreaTwo = ({blog}) => {
           <div className="row">
             <div className="col-xl-2 col-lg-2 col-md-2">
               <div className="tp-postbox-details-share-2">
-                <span>Share Now</span>
+                <span>Chia sẻ</span>
                 <ul>
                   {social_data.map(s => (
                   <li key={s.id}>
@@ -50,18 +50,18 @@ const BlogDetailsAreaTwo = ({blog}) => {
             <div className="col-xl-8 col-lg-8 col-md-10">
               <div className="tp-postbox-details-main-wrapper tp-postbox-style2">
                 <div className="tp-postbox-details-content">
-                  <p className="tp-dropcap">sales process is critically important to the success of your reps and your business. If you have never seen a really skilled salesperson work, it seems almost effortless. They ask great questions, craftt perfect proposal, answer questions, address concerns and seamlessly seal the Underneath the surface of all of that, the salesperson has probably dedicated hours honing their craft and ensuring the process moves smoothly.</p>
+                  <p className="tp-dropcap">Quy trình bán hàng là yếu tố sống còn quyết định hiệu quả của đội ngũ và tăng trưởng của doanh nghiệp. Một nhân viên bán hàng giỏi luôn biết đặt câu hỏi đúng, đề xuất đúng giải pháp và xử lý băn khoăn của khách hàng một cách tự nhiên.</p>
 
-                  <p>One of the challenges that often surfaces when  working with a remote sales team is a lack of transparency over what is happening, and where in the process things are taking place. We’re going to peel back the curtain and show you how to create the best sales.</p>
+                  <p>Một trong những khó khăn lớn khi vận hành đội ngũ từ xa là thiếu minh bạch trong từng giai đoạn xử lý khách hàng. Bài viết này giúp bạn nhìn rõ toàn bộ quy trình để tối ưu chuyển đổi tốt hơn.</p>
 
-                  <h4 className="tp-postbox-details-heading">Breaking Up With Fast Fashion Has Been Easier</h4>
-                  <p>Lommodo ligula eget dolor. Aenean massa. Cum sociis que penatibus magnis dis parturient montes lorem, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque euro, pretium, sem. Nulla onsequat massa quis enim. donec pede justo fringilla vel aliquet.</p>
+                  <h4 className="tp-postbox-details-heading">Tạm biệt thời trang nhanh dễ hơn bạn nghĩ</h4>
+                  <p>Khi thay đổi thói quen mua sắm theo hướng bền vững, bạn sẽ ưu tiên chất lượng, độ bền và tính ứng dụng lâu dài thay vì chạy theo xu hướng ngắn hạn.</p>
 
                   <div className="tp-postbox-details-desc-thumb text-center">
                     <Image src={blog_details_sm_img} alt="details-sm-img" />
-                    <span className="tp-postbox-details-desc-thumb-caption">Gucci’s Women’s Cruise Collection 2023 Lookbook Has Arrived</span>
+                    <span className="tp-postbox-details-desc-thumb-caption">Bộ ảnh bộ sưu tập du thuyền 2023 dành cho nữ đã chính thức ra mắt</span>
                   </div>
-                  <p>“We’re so glad we’ll be working with you to get your new marketing strategy up and running. I have attached the details of your package. Next you’ll get an email from Jen to schedule your kick-off meeting and be assigned your account rep. During your kick-off meeting, we will introduce your project team, let you know what access we need to start.” </p>
+                  <p>&ldquo;Đội ngũ rất vui khi được đồng hành cùng bạn triển khai chiến lược mới. Tài liệu chi tiết đã được gửi kèm và chúng tôi sẽ sớm liên hệ để lên lịch buổi khởi động.&rdquo;</p>
 
                   <div className="tp-postbox-details-quote">
                     <blockquote>
@@ -69,32 +69,32 @@ const BlogDetailsAreaTwo = ({blog}) => {
                         <Image className="tp-postbox-details-quote-shape-1" src={shape_line} alt="shape" />
                         <Image className="tp-postbox-details-quote-shape-2" src={shape_line_2} alt="shape" />
                       </div>
-                      <p>There is a way out of every box, a solution to every puzzle its just a matter of finding it.</p>
+                      <p>Mọi khó khăn đều có lối ra, mọi bài toán đều có lời giải, quan trọng là ta đủ kiên nhẫn để tìm.</p>
                       <cite>Shahnewaz Sakil</cite>
                     </blockquote>
                   </div>
 
-                  <h4 className="tp-postbox-details-heading">Exploring the English Countryside</h4>
-                  <p>Lorem ligula eget dolor. Aenean massa. Cum sociis que penatibus et magnis dis parturient montes lorem,nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque euro, pretium quis, sem. Nulla onsequat massa quis enim.</p>
+                  <h4 className="tp-postbox-details-heading">Khám phá miền quê thanh bình</h4>
+                  <p>Phong cách sống tinh gọn đang trở thành lựa chọn phổ biến của người trẻ, vì giúp tiết kiệm thời gian, chi phí và tạo không gian sống dễ chịu hơn.</p>
 
                   <div className="tp-postbox-details-list">
                     <ul>
-                      <li>Lorem ipsum dolor sit amet.</li>
-                      <li>At vero eos et accusamus et iusto odio.</li>
-                      <li>Excepteur sint occaecat cupidatat non proident.</li>
+                      <li>Chọn chất liệu bền và dễ bảo quản.</li>
+                      <li>Ưu tiên thiết kế phù hợp nhu cầu sử dụng.</li>
+                      <li>Đầu tư vào sản phẩm dùng được lâu dài.</li>
                     </ul>
                   </div>
-                  <p>Rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer cidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae lorem.</p>
+                  <p>Từ thời trang đến đồ gia dụng, việc chọn đúng sản phẩm theo nhu cầu thực tế sẽ giúp bạn tối ưu trải nghiệm sử dụng và tránh lãng phí không cần thiết.</p>
 
                   <div className="tp-postbox-details-share-wrapper">
                     <div className="row">
                       <div className="col-xl-12">
                         <div className="tp-postbox-details-tags tagcloud">
-                          <span>Tags:</span>
-                          <a href="#">Lifesttyle</a>
-                          <a href="#">Awesome</a>
-                          <a href="#">Winter</a>
-                          <a href="#">Sunglasses</a>
+                          <span>Thẻ:</span>
+                          <a href="#">Lối sống</a>
+                          <a href="#">Mua sắm</a>
+                          <a href="#">Xu hướng</a>
+                          <a href="#">Phụ kiện</a>
                         </div>
                       </div>
                     </div>
@@ -119,7 +119,7 @@ const BlogDetailsAreaTwo = ({blog}) => {
             <div className="row">
               <div className="col-xl-12">
                 <div className="tp-postbox-related">
-                  <h3 className="tp-postbox-related-title">Related Articles</h3>
+                  <h3 className="tp-postbox-related-title">Bài viết liên quan</h3>
 
                   <div className="row">
                     {related_blogs.map((blog) => (
@@ -137,15 +137,15 @@ const BlogDetailsAreaTwo = ({blog}) => {
           <div className="row justify-content-center">
             <div className="col-lg-8">
               <div className="tp-postbox-details-comment-wrapper">
-                <h3 className="tp-postbox-details-comment-title">Comments (2)</h3>
+                <h3 className="tp-postbox-details-comment-title">Bình luận (2)</h3>
                 {/* BlogDetailsComments */}
                 <BlogDetailsComments />
                 {/* BlogDetailsComments */}
               </div>
 
               <div className="tp-postbox-details-form">
-                <h3 className="tp-postbox-details-form-title">Leave a Reply</h3>
-                <p>Your email address will not be published. Required fields are marked *</p>
+                <h3 className="tp-postbox-details-form-title">Để lại bình luận</h3>
+                <p>Email của bạn sẽ không được hiển thị công khai. Các trường bắt buộc có dấu *</p>
 
                 {/* form start */}
                 <BlogPostCommentForm />

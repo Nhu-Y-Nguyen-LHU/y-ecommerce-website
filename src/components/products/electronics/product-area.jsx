@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 import { useGetProductTypeQuery } from "@/redux/features/productApi";
 import { ShapeLine, TabLine } from "@/svg";
 import ProductItem from "./product-item";
@@ -29,10 +29,10 @@ const ProductArea = () => {
     );
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No Products found!" />;
+    content = <ErrorMsg msg="Không tìm thấy sản phẩm!" />;
   }
   if (!isLoading && !isError && products?.data?.length > 0) {
     const product_items = products.data;
@@ -85,3 +85,4 @@ const ProductArea = () => {
 };
 
 export default ProductArea;
+

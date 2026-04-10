@@ -26,7 +26,7 @@ const GridItem = ({ blog,style_2=false }) => {
               <span>
                 <Comment/>
               </span>
-              {" "} Comments ({comments})
+              {" "} Bình luận ({comments})
             </span>
           </div>
           <h3 className="tp-blog-grid-title">
@@ -36,7 +36,7 @@ const GridItem = ({ blog,style_2=false }) => {
 
           <div className="tp-blog-grid-btn">
             <Link href={`/blog-details/${id}`} className="tp-link-btn-3">
-              Read More{" "}
+              Đọc thêm{" "}
               <span>
                 <ArrowRightLong />
               </span>

@@ -28,9 +28,9 @@ const CompareArea = () => {
             <div className="col-xl-12">
               {compareItems.length === 0 && (
                 <div className="text-center pt-50">
-                  <h3>No Compare Items Found</h3>
+                  <h3>Chưa có sản phẩm để so sánh</h3>
                   <Link href="/shop" className="tp-cart-checkout-btn mt-20">
-                    Continue Shipping
+                    Tiếp tục mua sắm
                   </Link>
                 </div>
               )}
@@ -39,7 +39,7 @@ const CompareArea = () => {
                   <table className="table">
                     <tbody>
                       <tr>
-                        <th>Product</th>
+                        <th>Sản phẩm</th>
                         {compareItems.map(item => (
                           <td key={item._id} className="">
                             <div className="tp-compare-thumb">
@@ -60,13 +60,13 @@ const CompareArea = () => {
                       </tr>
                       {/* Description */}
                       <tr>
-                        <th>Description</th>
+                        <th>Mô tả</th>
                         {compareItems.map(item => (
                           <td key={item._id}>
                             <div className="tp-compare-desc">
                               <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Ad, distinctio.
+                                Sản phẩm có thiết kế tinh tế, chất liệu bền đẹp
+                                và phù hợp nhu cầu sử dụng hằng ngày.
                               </p>
                             </div>
                           </td>
@@ -74,7 +74,7 @@ const CompareArea = () => {
                       </tr>
                       {/* Price */}
                       <tr>
-                        <th>Price</th>
+                        <th>Giá</th>
                         {compareItems.map(item => (
                           <td key={item._id}>
                             <div className="tp-compare-price">
@@ -85,12 +85,12 @@ const CompareArea = () => {
                       </tr>
                       {/* Add to cart*/}
                       <tr>
-                        <th>Add to cart</th>
+                        <th>Thêm vào giỏ</th>
                         {compareItems.map(item => (
                           <td key={item._id}>
                             <div className="tp-compare-add-to-cart">
                               <button onClick={() => handleAddProduct(item)} type="button" className="tp-btn">
-                                Add to Cart
+                                Thêm vào giỏ
                               </button>
                             </div>
                           </td>
@@ -98,7 +98,7 @@ const CompareArea = () => {
                       </tr>
                       {/* Rating */}
                       <tr>
-                        <th>Rating</th>
+                        <th>Đánh giá</th>
                         {compareItems.map(item => (
                           <td key={item._id}>
                             <div className="tp-compare-rating">
@@ -114,7 +114,7 @@ const CompareArea = () => {
                       </tr>
                       {/* Remove */}
                       <tr>
-                        <th>Remove</th>
+                        <th>Xóa</th>
                         {compareItems.map(item => (
                           <td key={item._id}>
                             <div className="tp-compare-remove">

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // internal
@@ -51,10 +51,10 @@ const BestSellerPrd = () => {
     );
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No Products found!" />;
+    content = <ErrorMsg msg="Không tìm thấy sản phẩm!" />;
   }
   if (!isLoading && !isError && products?.data?.length > 0) {
     const product_items = products.data.slice(0, 8);
@@ -75,8 +75,8 @@ const BestSellerPrd = () => {
             <div className="row">
               <div className="col-xl-12">
                   <div className="tp-section-title-wrapper-4 mb-50 text-center">
-                    <span className="tp-section-title-pre-4">Best Seller This Week’s</span>
-                    <h3 className="tp-section-title-4">Top Sellers In Dress for You</h3>
+                    <span className="tp-section-title-pre-4">Bán chạy tuần này</span>
+                    <h3 className="tp-section-title-4">Sản phẩm được chọn mua nhiều nhất</h3>
                   </div>
               </div>
             </div>

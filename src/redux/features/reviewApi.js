@@ -1,11 +1,13 @@
 import { apiSlice } from "../api/apiSlice";
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://shofy-backend.vercel.app';
+
 export const reviewApi = apiSlice.injectEndpoints({
   overrideExisting: true,
   endpoints: (builder) => ({
     addReview: builder.mutation({
       query: (data) => ({
-        url: "https://shofy-backend.vercel.app/api/review/add",
+        url: `${API_BASE_URL}/api/review/add`,
         method: "POST",
         body: data,
       }),

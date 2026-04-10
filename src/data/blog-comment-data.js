@@ -9,21 +9,21 @@ const comment_data = [
     id: 1,
     user: user_1,
     name: 'Lance Bogrol',
-    date: '12 April, 2023 at 3.50pm',
-    desc: 'By defining and following internal and external processes, your team will have clarity on resources to  attract and retain customers for your business.',
+    date: '12 Tháng 4, 2023 lúc 15:50',
+    desc: 'Khi quy trình nội bộ và đối ngoại được thiết lập rõ ràng, đội ngũ sẽ biết cách phân bổ nguồn lực để thu hút và giữ chân khách hàng hiệu quả hơn.',
     children:{
       user: user_2,
       name: 'Dasy Lily',
-      date: '15 April, 2023 at 5.50pm',
-      desc: 'By defining and following internal and external processes, your team will have clarity on resources to  attract and retain customers for your business.',
+      date: '15 Tháng 4, 2023 lúc 17:50',
+      desc: 'Đồng ý, đặc biệt với thương mại điện tử thì chuẩn hóa quy trình chăm sóc khách sẽ giúp tăng tỷ lệ quay lại mua hàng.',
     }
   },
   {
     id: 2,
     user: user_3,
     name: 'Shahnewaz Sakil',
-    date: '20 April, 2023 at 3.50pm',
-    desc: 'By defining and following internal and external processes, your team will have clarity on resources to  attract and retain customers for your business.',
+    date: '20 Tháng 4, 2023 lúc 15:50',
+    desc: 'Bài viết rất thực tế. Mình đã áp dụng vài bước và thấy việc phối hợp giữa marketing và vận hành mượt hơn hẳn.',
   },
 ]
 

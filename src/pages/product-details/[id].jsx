@@ -18,7 +18,7 @@ const ProductDetailsPage = ({ query }) => {
     content = <PrdDetailsLoader loading={isLoading}/>;
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && product) {
     content = (
@@ -30,7 +30,7 @@ const ProductDetailsPage = ({ query }) => {
   }
   return (
     <Wrapper>
-      <SEO pageTitle="Product Details" />
+      <SEO pageTitle="Chi tiet san pham" />
       <HeaderTwo style_2={true} />
       {content}
       <Footer primary_style={true} />

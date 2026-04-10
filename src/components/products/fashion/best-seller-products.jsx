@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 // internal
 import { TextShapeLine } from '@/svg';
@@ -19,10 +19,10 @@ const BestSellerProducts = () => {
     );
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No Products found!" />;
+    content = <ErrorMsg msg="Không tìm thấy sản phẩm!" />;
   }
   if (!isLoading && !isError && products?.data?.length > 0) {
     const product_items = products.data.slice(0, 4);
@@ -40,10 +40,10 @@ const BestSellerProducts = () => {
             <div className="col-xl-12">
               <div className="tp-section-title-wrapper-2 mb-50">
                 <span className="tp-section-title-pre-2">
-                  Best Seller This Week’s
+                  Bán chạy tuần này
                   <TextShapeLine />
                 </span>
-                <h3 className="tp-section-title-2">This {"Week's"} Featured</h3>
+                <h3 className="tp-section-title-2">Sản phẩm nổi bật trong tuần</h3>
               </div>
             </div>
           </div>
@@ -53,7 +53,7 @@ const BestSellerProducts = () => {
           <div className="row">
             <div className="col-xl-12">
               <div className="tp-seller-more text-center mt-10">
-                <Link href="/shop" className="tp-btn tp-btn-border tp-btn-border-sm">Shop All Product</Link>
+                <Link href="/shop" className="tp-btn tp-btn-border tp-btn-border-sm">Xem tất cả sản phẩm</Link>
               </div>
             </div>
           </div>

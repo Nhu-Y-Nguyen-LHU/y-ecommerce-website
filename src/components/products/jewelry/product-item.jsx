@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
@@ -43,7 +43,7 @@ const ProductItem = ({ product }) => {
                 className={`tp-product-action-btn-3 ${isAddedToCart ? 'active' : ''} tp-product-add-cart-btn text-center`}
               >
                 <Cart />
-                <span className="tp-product-tooltip">View Cart</span>
+                <span className="tp-product-tooltip">Xem giỏ hàng</span>
               </Link>
             ) : (
               <button
@@ -53,7 +53,7 @@ const ProductItem = ({ product }) => {
                 disabled={status === 'out-of-stock'}
               >
                 <Cart />
-                <span className="tp-product-tooltip">Add to Cart</span>
+                <span className="tp-product-tooltip">Them vao gio</span>
               </button>
             )}
             <button
@@ -62,7 +62,7 @@ const ProductItem = ({ product }) => {
               onClick={() => dispatch(handleProductModal(product))}
             >
               <QuickView />
-              <span className="tp-product-tooltip">Quick View</span>
+              <span className="tp-product-tooltip">Xem nhanh</span>
             </button>
             <button
               type="button"
@@ -71,7 +71,7 @@ const ProductItem = ({ product }) => {
               disabled={status === 'out-of-stock'}
             >
               <Wishlist />
-              <span className="tp-product-tooltip">Add To Wishlist</span>
+              <span className="tp-product-tooltip">Thêm yêu thích</span>
             </button>
           </div>
         </div>
@@ -90,9 +90,9 @@ const ProductItem = ({ product }) => {
           </div>
           <div className="tp-product-price-add-to-cart">
             {isAddedToCart ? <Link href="/cart" className="tp-product-add-to-cart-4">
-              <AddCart /> View Cart
+              <AddCart /> Xem giỏ hàng
             </Link> : <button disabled={status === 'out-of-stock'} onClick={()=> handleAddProduct(product)} className="tp-product-add-to-cart-4">
-              <AddCart /> Add to Cart
+              <AddCart /> Them vao gio
             </button>}
           </div>
         </div>
@@ -102,3 +102,4 @@ const ProductItem = ({ product }) => {
 };
 
 export default ProductItem;
+

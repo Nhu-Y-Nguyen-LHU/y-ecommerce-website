@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 // internal
 import Menus from "./header-com/menus";
 import useSticky from "@/hooks/use-sticky";
-import logo from "@assets/img/logo/logo.svg";
 import useCartInfo from "@/hooks/use-cart-info";
 import OffCanvas from "@/components/common/off-canvas";
 import { openCartMini } from "@/redux/features/cartSlice";
@@ -14,6 +12,7 @@ import HeaderTopRight from "./header-com/header-top-right";
 import HeaderMainRight from "./header-com/header-main-right";
 import CartMiniSidebar from "@/components/common/cart-mini-sidebar";
 import HeaderSearchForm from "@/components/forms/header-search-form";
+import BrandLogo from "@/components/common/brand-logo";
 import { CartTwo, CategoryMenu, Compare, Menu, Phone, ShippingCar, Wishlist } from "@/svg";
 
 const Header = () => {
@@ -36,7 +35,7 @@ const Header = () => {
                     <span>
                       <ShippingCar />
                     </span>
-                    <p>FREE Express Shipping On Orders $570+</p>
+                    <p>Miễn phí giao nhanh cho đơn từ 500.000đ</p>
                   </div>
                 </div>
                 <div className="col-md-6">
@@ -54,9 +53,7 @@ const Header = () => {
               <div className="row align-items-center">
                 <div className="col-xl-2 col-lg-2 col-md-4 col-6">
                   <div className="logo">
-                    <Link href="/">
-                      <Image src={logo} alt="logo" />
-                    </Link>
+                    <BrandLogo />
                   </div>
                 </div>
                 <div className="col-xl-6 col-lg-7 d-none d-lg-block">
@@ -86,7 +83,7 @@ const Header = () => {
                         <span>
                           <CategoryMenu />
                         </span>
-                        All Departments
+                        Danh mục sản phẩm
                       </button>
                       <nav className="tp-category-menu-content">
                         <HeaderCategory categoryType="electronics" isCategoryActive={isCategoryActive} />
@@ -109,9 +106,9 @@ const Header = () => {
                         </span>
                       </div>
                       <div className="tp-header-contact-content">
-                        <h5>Hotline:</h5>
+                        <h5>Tư vấn mua hàng:</h5>
                         <p>
-                          <a href="tel:966-595-035-008">+(966) 595 035 008</a>
+                          <a href="tel:1900636600">1900 636 600</a>
                         </p>
                       </div>
                     </div>
@@ -130,9 +127,7 @@ const Header = () => {
             <div className="row align-items-center">
               <div className="col-xl-3 col-lg-3 col-md-3 col-6">
                 <div className="logo">
-                  <Link href="/">
-                    <Image src={logo} alt="logo" />
-                  </Link>
+                  <BrandLogo compact />
                 </div>
               </div>
               <div className="col-xl-6 col-lg-6 col-md-6 d-none d-md-block">

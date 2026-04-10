@@ -21,14 +21,14 @@ const BlogItem = ({blog}) => {
 
         <div className="tp-blog-tag">
           <span><i className="fa-light fa-tag"></i></span>
-          {blog.tags.map((t,i) => <a key={i} href="#">Tablet,</a>)}
+          {blog.tags.map((t,i) => <a key={i} href="#">{t}{i < blog.tags.length - 1 ? ',' : ''}</a>)}
         </div>
 
         <p>{blog.sm_desc}</p>
 
         <div className="tp-blog-btn">
           <Link href={`/blog-details/${blog.id}`} className="tp-btn-2 tp-btn-border-2">
-            Read More
+            Đọc thêm
             <span>
               <ArrowRightLong />
             </span>

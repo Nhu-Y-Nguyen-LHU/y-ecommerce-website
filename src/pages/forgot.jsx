@@ -9,9 +9,9 @@ import Footer from '@/layout/footers/footer';
 const ForgotPage = () => {
   return (
     <Wrapper>
-      <SEO pageTitle="Login" />
+      <SEO pageTitle="Quên mật khẩu" />
       <HeaderTwo style_2={true} />
-      <CommonBreadcrumb title="Forgot Password" subtitle="Reset Password" center={true} />
+      <CommonBreadcrumb title="Quên mật khẩu" subtitle="Đặt lại mật khẩu" center={true} />
       <ForgotArea />
       <Footer primary_style={true} />
     </Wrapper>

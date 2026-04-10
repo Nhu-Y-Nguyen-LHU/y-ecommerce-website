@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { useRouter } from "next/router";
 // internal
 import ErrorMsg from "@/components/common/error-msg";
@@ -30,10 +30,10 @@ const PrdCategoryList = () => {
     content = <CategoryListLoader loading={isLoading}/>;
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && categories?.result?.length === 0) {
-    content = <ErrorMsg msg="No Category found!" />;
+    content = <ErrorMsg msg="Không tìm thấy danh mục!" />;
   }
   if (!isLoading && !isError && categories?.result?.length > 0) {
     const category_items = categories.result;
@@ -47,3 +47,4 @@ const PrdCategoryList = () => {
 };
 
 export default PrdCategoryList;
+

@@ -38,22 +38,22 @@ const ForgotForm = () => {
         <div className="tp-login-input-box">
           <div className="tp-login-input">
             <input
-              {...register("email", { required: `Email is required!` })}
+              {...register("email", { required: `Vui lòng nhập email!` })}
               name="email"
               id="email"
               type="email"
-              placeholder="shofy@mail.com"
+              placeholder="ban@nymart.vn"
             />
           </div>
           <div className="tp-login-input-title">
-            <label htmlFor="email">Your Email</label>
+            <label htmlFor="email">Email của bạn</label>
           </div>
           <ErrorMsg msg={errors.email?.message} />
         </div>
       </div>
       <div className="tp-login-bottom mb-15">
         <button type="submit" className="tp-login-btn w-100">
-          Send Mail
+          Gửi email
         </button>
       </div>
     </form>

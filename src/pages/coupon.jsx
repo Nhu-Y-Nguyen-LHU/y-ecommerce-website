@@ -9,9 +9,9 @@ import CouponArea from '@/components/coupon/coupon-area';
 const CouponPage = () => {
   return (
     <Wrapper>
-      <SEO pageTitle="Coupon" />
+      <SEO pageTitle="Mã giảm giá" />
       <HeaderTwo style_2={true} />
-      <CommonBreadcrumb title="Grab Best Offer" subtitle="Coupon" />
+      <CommonBreadcrumb title="Ưu đãi nổi bật" subtitle="Mã giảm giá" />
       <CouponArea/>
       <Footer primary_style={true} />
     </Wrapper>

@@ -1,4 +1,4 @@
-import user_1 from '@assets/img/users/user-1.jpg';
+﻿import user_1 from '@assets/img/users/user-1.jpg';
 import user_2 from '@assets/img/users/user-2.jpg';
 import user_3 from '@assets/img/users/user-3.jpg';
 import user_4 from '@assets/img/users/user-4.jpg';
@@ -11,7 +11,7 @@ export const fashion_testi_data = [
     desc:'“ How you use the city or town name is up to you. All results may be freely used in any work.”',
     user:user_2,
     name:'Theodore Handle',
-    designation:'CO Founder'
+    designation:'Đồng sáng lập'
   },
   {
     id:2,
@@ -19,7 +19,7 @@ export const fashion_testi_data = [
     desc:'“Very happy with our choice to take our daughter to Brave care. The entire team was great! Thank you!”',
     user:user_3,
     name:'John Smith',
-    designation:'UI/UX Designer'
+    designation:'Thiết kế UI/UX'
   },
   {
     id:3,
@@ -27,7 +27,7 @@ export const fashion_testi_data = [
     desc:'“Thanks for all your efforts and teamwork over the last several months!  Thank you so much”',
     user:user_4,
     name:'Salim Rana',
-    designation:'Web Developer'
+    designation:'Lập trình viên Web'
   },
 ]
 
@@ -36,25 +36,26 @@ export const beauty_testi_data = [
   {
     id:1,
     review:4,
-    desc:'Suscipit tellus mauris a diam maecenas. Ut faucibus pulvinar elementum integer enim neque volutpat ac. Auctor urna nunc id cursus. Scelerisque purus semper eget duis at. Pharetra vel turpis nunc eget.',
+    desc:'Sản phẩm đúng như mô tả, giao nhanh và đóng gói kỹ. Trải nghiệm mua sắm rất hài lòng.',
     user:user_1,
     name:'Jake Weary',
-    designation:'CO Founder'
+    designation:'Khách hàng thân thiết'
   },
   {
     id:2,
     review:3.5,
-    desc:'Suscipit tellus mauris a diam maecenas. Ut faucibus pulvinar elementum integer enim neque volutpat ac. Auctor urna nunc id cursus. Scelerisque purus semper eget duis at. Pharetra vel turpis nunc eget.',
+    desc:'Giá cả hợp lý, chăm sóc khách hàng nhanh. Sẽ tiếp tục mua tại NY - MART.',
     user:user_2,
     name:'Salim Rana',
-    designation:'Web Developer'
+    designation:'Nhân viên văn phòng'
   },
   {
     id:3,
     review:5,
-    desc:'Suscipit tellus mauris a diam maecenas. Ut faucibus pulvinar elementum integer enim neque volutpat ac. Auctor urna nunc id cursus. Scelerisque purus semper eget duis at. Pharetra vel turpis nunc eget.',
+    desc:'Nhiều sản phẩm để chọn, ưu đãi thường xuyên. Đặt hàng dễ dàng và nhận hàng đúng hẹn.',
     user:user_3,
     name:'Selina Gomz',
-    designation:'CO Founder'
+    designation:'Khách hàng mới'
   },
 ]
+

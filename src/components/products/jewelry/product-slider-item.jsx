@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
 // internal
@@ -47,7 +47,7 @@ const ProductSliderItem = ({ product }) => {
               className={`tp-product-action-btn-3 ${isAddedToCart ? 'active' : ''} tp-product-add-cart-btn`}
             >
               <Cart />
-              <span className="tp-product-tooltip">View Cart</span>
+              <span className="tp-product-tooltip">Xem giỏ hàng</span>
             </Link>
           ) : (
             <button
@@ -56,7 +56,7 @@ const ProductSliderItem = ({ product }) => {
               className={`tp-product-action-btn-3 ${isAddedToCart ? 'active' : ''} tp-product-add-cart-btn`}
             >
               <Cart />
-              <span className="tp-product-tooltip">Add to Cart</span>
+              <span className="tp-product-tooltip">Them vao gio</span>
             </button>
           )}
           <button
@@ -65,7 +65,7 @@ const ProductSliderItem = ({ product }) => {
             onClick={() => dispatch(handleProductModal(product))}
           >
             <QuickView />
-            <span className="tp-product-tooltip">Quick View</span>
+            <span className="tp-product-tooltip">Xem nhanh</span>
           </button>
           <button
             type="button"
@@ -73,7 +73,7 @@ const ProductSliderItem = ({ product }) => {
             className={`tp-product-action-btn-3 ${isAddedToWishlist ? 'active' : ''} tp-product-add-to-wishlist-btn`}
           >
             <Wishlist />
-            <span className="tp-product-tooltip">Add To Wishlist</span>
+            <span className="tp-product-tooltip">Thêm yêu thích</span>
           </button>
         </div>
       </div>
@@ -86,11 +86,11 @@ const ProductSliderItem = ({ product }) => {
           <div className="tp-category-add-to-cart">
             {isAddedToCart ? (
               <Link href="/cart" className="tp-category-add-to-cart-4">
-                <AddCart />{" "}View Cart
+                <AddCart />{" "}Xem giỏ hàng
               </Link>
             ) : (
               <button onClick={() => handleAddProduct(product)} className="tp-category-add-to-cart-4">
-                <AddCart />{" "}Add to Cart
+                <AddCart />{" "}Them vao gio
               </button>
             )}
           </div>
@@ -101,3 +101,4 @@ const ProductSliderItem = ({ product }) => {
 };
 
 export default ProductSliderItem;
+

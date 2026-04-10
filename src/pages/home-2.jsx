@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import SEO from '@/components/seo';
 import HeaderTwo from '@/layout/headers/header-2';
 import Wrapper from '@/layout/wrapper';
@@ -18,7 +18,7 @@ import Footer from '@/layout/footers/footer';
 const HomeTwo = () => {
   return (
     <Wrapper>
-      <SEO pageTitle="Home Two" />
+      <SEO pageTitle="Trang chủ thời trang" />
       <HeaderTwo/>
       <FashionBanner/>
       <FashionCategory/>
@@ -37,3 +37,4 @@ const HomeTwo = () => {
 };
 
 export default HomeTwo;
+

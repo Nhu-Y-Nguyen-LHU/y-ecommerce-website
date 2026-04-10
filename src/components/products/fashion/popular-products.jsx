@@ -1,4 +1,4 @@
-// external
+﻿// external
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar } from "swiper";
@@ -65,10 +65,10 @@ const PopularProducts = () => {
     content = <HomeTwoPopularPrdLoader loading={isLoading}/>;
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No Products found!" />;
+    content = <ErrorMsg msg="Không tìm thấy sản phẩm!" />;
   }
   if (!isLoading && !isError && products?.data?.length > 0) {
     const product_items = products.data;
@@ -90,7 +90,7 @@ const PopularProducts = () => {
               </Link>
             </div>
             <div className="tp-category-content-2">
-              <span>From ${item.price}</span>
+              <span>Từ ${item.price}</span>
               <h3 className="tp-category-title-2">
                 <Link href={`/product-details/${item._id}`}>{item.title.substring(0, 15)}</Link>
               </h3>
@@ -100,14 +100,14 @@ const PopularProducts = () => {
                     href="/cart"
                     className="tp-btn tp-btn-border cursor-pointer"
                   >
-                    View Cart
+                    Xem giỏ hàng
                   </Link>
                 ) : (
                   <a
                     onClick={() => handleAddProduct(item)}
                     className="tp-btn tp-btn-border cursor-pointer"
                   >
-                    Add to Cart
+                    Them vao gio
                   </a>
                 )}
               </div>
@@ -125,11 +125,11 @@ const PopularProducts = () => {
             <div className="col-xl-12">
               <div className="tp-section-title-wrapper-2 text-center mb-50">
                 <span className="tp-section-title-pre-2">
-                  Shop by Popular
+                  Sản phẩm nổi bật
                   <TextShapeLine />
                 </span>
                 <h3 className="tp-section-title-2">
-                  Popular on the Shofy store.
+                  Sản phẩm được ưa chuộng tại NY - MART.
                 </h3>
               </div>
             </div>
@@ -149,3 +149,5 @@ const PopularProducts = () => {
 };
 
 export default PopularProducts;
+
+

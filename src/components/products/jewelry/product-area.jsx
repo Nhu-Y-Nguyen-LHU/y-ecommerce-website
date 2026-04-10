@@ -1,14 +1,19 @@
-import ErrorMsg from '@/components/common/error-msg';
+﻿import ErrorMsg from '@/components/common/error-msg';
 import { useGetProductTypeQuery } from '@/redux/features/productApi';
 import React, { useEffect, useRef, useState } from 'react';
 import ProductItem from './product-item';
 import { HomeTwoPrdLoader } from '@/components/loader';
 
 // tabs
-const tabs = ["All Collection", "Bracelets", "Necklaces", "Earrings"];
+const tabs = [
+  { label: "Tất cả bộ sưu tập", value: "all" },
+  { label: "Vòng tay", value: "Bracelets" },
+  { label: "Dây chuyền", value: "Necklaces" },
+  { label: "Hoa tai", value: "Earrings" },
+];
 
 const ProductArea = () => {
-  const [activeTab, setActiveTab] = useState(tabs[0]);
+  const [activeTab, setActiveTab] = useState(tabs[0].value);
   const activeRef = useRef(null);
   const marker = useRef(null);
   const { data: products, isError, isLoading } = useGetProductTypeQuery({ type: 'jewelry' });
@@ -21,8 +26,8 @@ const ProductArea = () => {
     }
   }, [activeTab,products]);
 
-  const handleActiveTab = (e, tab) => {
-    setActiveTab(tab);
+  const handleActiveTab = (e, tabValue) => {
+    setActiveTab(tabValue);
   };
 
   // decide what to render
@@ -34,15 +39,15 @@ const ProductArea = () => {
     );
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No Products found!" />;
+    content = <ErrorMsg msg="Không tìm thấy sản phẩm!" />;
   }
   if (!isLoading && !isError && products?.data?.length > 0) {
 
     let product_items = products.data;
-    if (activeTab === 'All Collection') {
+    if (activeTab === 'all') {
       product_items = products.data
     }
     else if (activeTab === 'Bracelets') {
@@ -58,8 +63,8 @@ const ProductArea = () => {
       <div className="row align-items-end">
         <div className="col-xl-6 col-lg-6">
           <div className="tp-section-title-wrapper-4 mb-40 text-center text-lg-start">
-            <span className="tp-section-title-pre-4">Product Collection</span>
-            <h3 className="tp-section-title-4">Discover our Products</h3>
+            <span className="tp-section-title-pre-4">Bộ sưu tập sản phẩm</span>
+            <h3 className="tp-section-title-4">Khám phá sản phẩm tại NY - MART</h3>
           </div>
         </div>
         <div className="col-xl-6 col-lg-6">
@@ -71,11 +76,11 @@ const ProductArea = () => {
                   {tabs.map((tab, i) => (
                     <button
                       key={i}
-                      ref={activeTab === tab ? activeRef : null}
-                      onClick={(e) => handleActiveTab(e, tab)}
-                      className={`nav-link text-capitalize ${activeTab === tab ? "active" : ""}`}
+                      ref={activeTab === tab.value ? activeRef : null}
+                      onClick={(e) => handleActiveTab(e, tab.value)}
+                      className={`nav-link text-capitalize ${activeTab === tab.value ? "active" : ""}`}
                     >
-                      {tab.split("-").join(" ")}
+                      {tab.label}
                       <span className="tp-product-tab-tooltip">{product_items.length}</span>
                     </button>
                   ))}

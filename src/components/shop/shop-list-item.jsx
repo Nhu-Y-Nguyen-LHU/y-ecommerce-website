@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import Image from "next/image";
 import { Rating } from "react-simple-star-rating";
@@ -56,7 +56,7 @@ const ShopListItem = ({ product }) => {
             >
               <QuickView />
               <span className="tp-product-tooltip tp-product-tooltip-right">
-                Quick View
+                Xem nhanh
               </span>
             </button>
             <button
@@ -66,7 +66,7 @@ const ShopListItem = ({ product }) => {
             >
               <Wishlist />
               <span className="tp-product-tooltip tp-product-tooltip-right">
-                Add To Wishlist
+                Thêm yêu thích
               </span>
             </button>
             <button
@@ -76,7 +76,7 @@ const ShopListItem = ({ product }) => {
             >
               <CompareThree />
               <span className="tp-product-tooltip tp-product-tooltip-right">
-                Add To Compare
+                Thêm so sánh
               </span>
             </button>
           </div>
@@ -110,7 +110,7 @@ const ShopListItem = ({ product }) => {
           </p>
           <div className="tp-product-list-add-to-cart">
             <button onClick={() => handleAddProduct(product)} className="tp-product-list-add-to-cart-btn">
-              Add To Cart
+              Them vao gio
             </button>
           </div>
         </div>
@@ -120,3 +120,4 @@ const ShopListItem = ({ product }) => {
 };
 
 export default ShopListItem;
+

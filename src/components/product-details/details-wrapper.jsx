@@ -11,6 +11,7 @@ import { add_cart_product } from '@/redux/features/cartSlice';
 import { add_to_wishlist } from '@/redux/features/wishlist-slice';
 import { add_to_compare } from '@/redux/features/compareSlice';
 import { handleModalClose } from '@/redux/features/productModalSlice';
+import { formatVND } from '@/utils/currency';
 
 const DetailsWrapper = ({ productItem, handleImageActive, activeImg, detailsBottom = false }) => {
   const { sku, img, title, imageURLs, category, description, discount, price, status, reviews, tags, offerDate } = productItem || {};
@@ -61,32 +62,32 @@ const DetailsWrapper = ({ productItem, handleImageActive, activeImg, detailsBott
             <Rating allowFraction size={16} initialValue={ratingVal} readonly={true} />
           </div>
           <div className="tp-product-details-reviews">
-            <span>({reviews && reviews.length > 0 ? reviews.length : 0} Review)</span>
+            <span>({reviews && reviews.length > 0 ? reviews.length : 0} đánh giá)</span>
           </div>
         </div>
       </div>
       <p>{textMore ? description : `${description.substring(0, 100)}...`}
-        <span onClick={() => setTextMore(!textMore)}>{textMore ? 'See less' : 'See more'}</span>
+        <span onClick={() => setTextMore(!textMore)}>{textMore ? 'Thu gọn' : 'Xem thêm'}</span>
       </p>
 
       {/* price */}
       <div className="tp-product-details-price-wrapper mb-20">
         {discount > 0 ? (
           <>
-            <span className="tp-product-details-price old-price">${price}</span>
+            <span className="tp-product-details-price old-price">{formatVND(price)}</span>
             <span className="tp-product-details-price new-price">
-              {" "}${(Number(price) - (Number(price) * Number(discount)) / 100).toFixed(2)}
+              {" "}{formatVND(Number(price) - (Number(price) * Number(discount)) / 100)}
             </span>
           </>
         ) : (
-          <span className="tp-product-details-price new-price">${price.toFixed(2)}</span>
+          <span className="tp-product-details-price new-price">{formatVND(price)}</span>
         )}
       </div>
 
       {/* variations */}
       {imageURLs.some(item => item?.color && item?.color?.name) && <div className="tp-product-details-variation">
         <div className="tp-product-details-variation-item">
-          <h4 className="tp-product-details-variation-title">Color :</h4>
+          <h4 className="tp-product-details-variation-title">Màu sắc:</h4>
           <div className="tp-product-details-variation-list">
             {imageURLs.map((item, i) => (
               <button onClick={() => handleImageActive(item)} key={i} type="button"
@@ -112,32 +113,32 @@ const DetailsWrapper = ({ productItem, handleImageActive, activeImg, detailsBott
 
       {/* actions */}
       <div className="tp-product-details-action-wrapper">
-        <h3 className="tp-product-details-action-title">Quantity</h3>
+        <h3 className="tp-product-details-action-title">Số lượng</h3>
         <div className="tp-product-details-action-item-wrapper d-sm-flex align-items-center">
           {/* product quantity */}
           <ProductQuantity />
           {/* product quantity */}
           <div className="tp-product-details-add-to-cart mb-15 w-100">
-            <button onClick={() => handleAddProduct(productItem)} disabled={status === 'out-of-stock'} className="tp-product-details-add-to-cart-btn w-100">Add To Cart</button>
+            <button onClick={() => handleAddProduct(productItem)} disabled={status === 'out-of-stock'} className="tp-product-details-add-to-cart-btn w-100">Thêm vào giỏ</button>
           </div>
         </div>
         <Link href="/cart" onClick={() => dispatch(handleModalClose())}>
-          <button className="tp-product-details-buy-now-btn w-100">Buy Now</button>
+          <button className="tp-product-details-buy-now-btn w-100">Mua ngay</button>
         </Link>
       </div>
       {/* product-details-action-sm start */}
       <div className="tp-product-details-action-sm">
         <button disabled={status === 'out-of-stock'} onClick={() => handleCompareProduct(productItem)} type="button" className="tp-product-details-action-sm-btn">
           <CompareTwo />
-          Compare
+          So sánh
         </button>
         <button disabled={status === 'out-of-stock'} onClick={() => handleWishlistProduct(productItem)} type="button" className="tp-product-details-action-sm-btn">
           <WishlistTwo />
-          Add Wishlist
+          Thêm yêu thích
         </button>
         <button type="button" className="tp-product-details-action-sm-btn">
           <AskQuestion />
-          Ask a question
+          Đặt câu hỏi
         </button>
       </div>
       {/* product-details-action-sm end */}

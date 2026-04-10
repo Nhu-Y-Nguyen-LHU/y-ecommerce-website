@@ -2,7 +2,6 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
 import Image from "next/image";
-// internal
 import useCartInfo from "@/hooks/use-cart-info";
 import { CartTwo, Compare, Menu, User, Wishlist } from "@/svg";
 import { openCartMini } from "@/redux/features/cartSlice";
@@ -11,7 +10,8 @@ const HeaderMainRight = ({ setIsCanvasOpen }) => {
   const { user: userInfo } = useSelector((state) => state.auth);
   const { wishlist } = useSelector((state) => state.wishlist);
   const { quantity } = useCartInfo();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+
   return (
     <div className="tp-header-main-right d-flex align-items-center justify-content-end">
       <div className="tp-header-login d-none d-lg-block">
@@ -20,18 +20,11 @@ const HeaderMainRight = ({ setIsCanvasOpen }) => {
             <span>
               {userInfo?.imageURL ? (
                 <Link href="/profile">
-                  <Image
-                    src={userInfo.imageURL}
-                    alt="user img"
-                    width={35}
-                    height={35}
-                  />
+                  <Image src={userInfo.imageURL} alt="user img" width={35} height={35} />
                 </Link>
               ) : userInfo?.name ? (
                 <Link href="/profile">
-                  <h2 className="text-uppercase login_text">
-                    {userInfo?.name[0]}
-                  </h2>
+                  <h2 className="text-uppercase login_text">{userInfo?.name[0]}</h2>
                 </Link>
               ) : (
                 <User />
@@ -41,17 +34,18 @@ const HeaderMainRight = ({ setIsCanvasOpen }) => {
           <div className="tp-header-login-content d-none d-xl-block">
             {!userInfo?.name && (
               <Link href="/login">
-                <span>Hello,</span>
+                <span>Xin chào,</span>
               </Link>
             )}
-            {userInfo?.name && <span>Hello, {userInfo?.name}</span>}
+            {userInfo?.name && <span>Xin chào, {userInfo?.name}</span>}
             <div className="tp-header-login-title">
-              {!userInfo?.name && <Link href="/login">Sign In</Link>}
-              {userInfo?.name && <Link href="/profile">Your Account</Link>}
+              {!userInfo?.name && <Link href="/login">Đăng nhập</Link>}
+              {userInfo?.name && <Link href="/profile">Tài khoản của bạn</Link>}
             </div>
           </div>
         </div>
       </div>
+
       <div className="tp-header-action d-flex align-items-center ml-50">
         <div className="tp-header-action-item d-none d-lg-block">
           <Link href="/compare" className="tp-header-action-btn">

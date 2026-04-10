@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import SEO from "@/components/seo";
 import HeaderTwo from "@/layout/headers/header-2";
 import Wrapper from "@/layout/wrapper";
@@ -9,7 +9,7 @@ import blogData from "@/data/blog-data";
 const BlogDetailsPage = () => {
   return (
     <Wrapper>
-      <SEO pageTitle="Blog Details" />
+      <SEO pageTitle="Chi tiết tin tức" />
       <HeaderTwo style_2={true} />
       <BlogDetailsArea blog={blogData[4]} />
       <Footer primary_style={true} />
@@ -18,5 +18,7 @@ const BlogDetailsPage = () => {
 };
 
 export default BlogDetailsPage;
+
+
 
 

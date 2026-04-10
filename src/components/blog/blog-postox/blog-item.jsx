@@ -88,7 +88,7 @@ const BlogItem = ({ item = {} }) => {
               </span>
               <span>
                 <a href="#">
-                  <i className="fal fa-comments"></i> {item.comments} Comments
+                  <i className="fal fa-comments"></i> {item.comments} bình luận
                 </a>
               </span>
             </div>
@@ -105,7 +105,7 @@ const BlogItem = ({ item = {} }) => {
             </div>
             <div className="tp-postbox-read-more">
               <Link href={`/blog-details/${item.id}`} className="tp-btn">
-                Read More
+                Đọc thêm
               </Link>
             </div>
           </div>

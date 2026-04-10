@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 // internal
 import Menus from './header-com/menus';
-import logo from '@assets/img/logo/logo.svg';
 import useSticky from '@/hooks/use-sticky';
 import useCartInfo from '@/hooks/use-cart-info';
 import { openCartMini } from '@/redux/features/cartSlice';
@@ -13,6 +11,7 @@ import CartMiniSidebar from '@/components/common/cart-mini-sidebar';
 import { CartTwo, Compare, Facebook, Menu, PhoneTwo, Wishlist, Search } from '@/svg';
 import useSearchFormSubmit from '@/hooks/use-search-form-submit';
 import OffCanvas from '@/components/common/off-canvas';
+import BrandLogo from '@/components/common/brand-logo';
 
 const HeaderTwo = ({ style_2 = false }) => {
   const { wishlist } = useSelector((state) => state.wishlist);
@@ -34,14 +33,14 @@ const HeaderTwo = ({ style_2 = false }) => {
                       <a href="#">
                         <span>
                           <Facebook />
-                        </span> 7500k Followers
+                        </span> Theo dõi NY - MART
                       </a>
                     </div>
                     <div className="tp-header-info-item">
-                      <a href="tel:402-763-282-46">
+                      <a href="tel:1900636600">
                         <span>
                           <PhoneTwo />
-                        </span> +(966) 595 035 008
+                        </span> 1900 636 600
                       </a>
                     </div>
                   </div>
@@ -61,9 +60,7 @@ const HeaderTwo = ({ style_2 = false }) => {
                 <div className="row align-items-center">
                   <div className="col-xl-2 col-lg-5 col-md-5 col-sm-4 col-6">
                     <div className="logo">
-                      <Link href="/">
-                        <Image src={logo} alt="logo" priority />
-                      </Link>
+                      <BrandLogo />
                     </div>
                   </div>
                   <div className="col-xl-5 d-none d-xl-block">
@@ -81,7 +78,7 @@ const HeaderTwo = ({ style_2 = false }) => {
                             onChange={(e) => setSearchText(e.target.value)}
                             value={searchText}
                             type="text"
-                            placeholder="Search for Products..." />
+                            placeholder="Tìm kiếm sản phẩm..." />
                           <button type="submit">
                             <Search />
                           </button>

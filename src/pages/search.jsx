@@ -1,4 +1,4 @@
-import CommonBreadcrumb from "@/components/breadcrumb/common-breadcrumb";
+﻿import CommonBreadcrumb from "@/components/breadcrumb/common-breadcrumb";
 import ErrorMsg from "@/components/common/error-msg";
 import SearchPrdLoader from "@/components/loader/search-prd-loader";
 import ProductItem from "@/components/products/fashion/product-item";
@@ -36,11 +36,11 @@ export default function SearchPage({ query }) {
   }
 
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
 
   if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No products found!" />;
+    content = <ErrorMsg msg="Không tìm thấy sản phẩm!" />;
   }
 
   if (!isLoading && !isError && products?.data?.length > 0) {
@@ -72,7 +72,7 @@ export default function SearchPage({ query }) {
     if (product_items.length === 0) {
       content = (
         <div className="text-center pt-80 pb-80">
-          <h3>Sorry, nothing matched <span style={{color:'#0989FF'}}>{searchText}</span> search terms</h3>
+          <h3>Rất tiếc, không tìm thấy kết quả phù hợp với từ khóa <span style={{color:'#722F37'}}>{searchText}</span></h3>
         </div>
       );
     }
@@ -91,7 +91,7 @@ export default function SearchPage({ query }) {
 
                           <div className="tp-shop-top-left d-flex align-items-center ">
                             <div className="tp-shop-top-result">
-                              <p>Showing 1–{product_items.length} of {all_products.length} results</p>
+                              <p>Hiển thị 1-{product_items.length} trên {all_products.length} sản phẩm</p>
                             </div>
                           </div>
 
@@ -101,13 +101,13 @@ export default function SearchPage({ query }) {
                             <div className="tp-shop-top-select">
                               <NiceSelect
                                 options={[
-                                  { value: "Short By Price", text: "Short By Price" },
-                                  { value: "Price low to high", text: "Price low to high" },
-                                  { value: "Price high to low", text: "Price high to low" },
+                                  { value: "Short By Price", text: "Sắp xếp theo giá" },
+                                  { value: "Price low to high", text: "Giá thấp đến cao" },
+                                  { value: "Price high to low", text: "Giá cao đến thấp" },
                                 ]}
                                 defaultCurrent={0}
                                 onChange={shortHandler}
-                                name="Short By Price"
+                                name="Sắp xếp theo giá"
                               />
                             </div>
                           </div>
@@ -135,7 +135,7 @@ export default function SearchPage({ query }) {
                     {next < product_items?.length && (
                       <div className="load-more-btn text-center pt-50">
                         <button onClick={handleLoadMore} className="tp-btn tp-btn-2 tp-btn-blue">
-                          Load More
+                          Xem thêm
                         </button>
                       </div>
                     )}
@@ -152,9 +152,9 @@ export default function SearchPage({ query }) {
 
   return (
     <Wrapper>
-      <SEO pageTitle="Wishlist" />
+      <SEO pageTitle="Tìm kiếm sản phẩm" />
       <HeaderTwo style_2={true} />
-      <CommonBreadcrumb title="Search Products" subtitle="Search Products" />
+      <CommonBreadcrumb title="Tìm kiếm sản phẩm" subtitle="Tìm kiếm sản phẩm" />
       {content}
       <Footer primary_style={true} />
     </Wrapper>
@@ -170,3 +170,5 @@ export const getServerSideProps = async (context) => {
     },
   };
 };
+
+

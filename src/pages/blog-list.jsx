@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import SEO from "@/components/seo";
 import HeaderTwo from "@/layout/headers/header-2";
 import Wrapper from "@/layout/wrapper";
@@ -9,7 +9,7 @@ import BlogGridArea from "@/components/blog/blog-grid/blog-grid-area";
 const BlogListPage = () => {
   return (
     <Wrapper>
-      <SEO pageTitle="Blog List" />
+      <SEO pageTitle="Tin tức danh sách" />
       <HeaderTwo style_2={true} />
       <SectionTitle/>
       <BlogGridArea list_area={true} />
@@ -19,3 +19,5 @@ const BlogListPage = () => {
 };
 
 export default BlogListPage;
+
+

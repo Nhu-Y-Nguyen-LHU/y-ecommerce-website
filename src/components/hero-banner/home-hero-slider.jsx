@@ -18,36 +18,36 @@ import { ArrowRightLong, SliderNextBtn, SliderPrevBtn, TextShape } from "@/svg";
 const sliderData = [
   {
     id: 1,
-    pre_title: { text: "Starting at", price: 274 },
-    title: "The best tablet Collection 2023",
+    pre_title: { text: "Giá từ", price: 274 },
+    title: "Bộ sưu tập máy tính bảng nổi bật 2026",
     subtitle: {
-      text_1: "Exclusive offer ",
+      text_1: "Ưu đãi độc quyền ",
       percent: 35,
-      text_2: "off this week",
+      text_2: "trong tuần này",
     },
     img: slider_img_1,
     green_bg: true,
   },
   {
     id: 2,
-    pre_title: { text: "Starting at", price: 999 },
-    title: "The best note book collection 2023",
+    pre_title: { text: "Giá từ", price: 999 },
+    title: "Bộ sưu tập laptop bán chạy 2026",
     subtitle: {
-      text_1: "Exclusive offer ",
+      text_1: "Ưu đãi độc quyền ",
       percent: 10,
-      text_2: "off this week",
+      text_2: "trong tuần này",
     },
     img: slider_img_2,
     green_bg: true,
   },
   {
     id: 3,
-    pre_title: { text: "Starting at", price: 999 },
-    title: "The best note book collection 2023",
+    pre_title: { text: "Giá từ", price: 999 },
+    title: "Bộ sưu tập laptop bán chạy 2026",
     subtitle: {
-      text_1: "Exclusive offer ",
+      text_1: "Ưu đãi độc quyền ",
       percent: 10,
-      text_2: "off this week",
+      text_2: "trong tuần này",
     },
     img: slider_img_3,
     is_light: true,
@@ -128,7 +128,7 @@ const HomeHeroSlider = () => {
 
                       <div className="tp-slider-btn">
                         <Link href="/shop" className="tp-btn tp-btn-2 tp-btn-white">
-                          Shop Now
+                          Mua ngay
                           {" "} <ArrowRightLong />
                         </Link>
                       </div>

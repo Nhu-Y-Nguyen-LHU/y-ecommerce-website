@@ -5,6 +5,7 @@ import Link from 'next/link';
 import featured_1 from '@assets/img/product/featured/featured-1.png';
 import featured_2 from '@assets/img/product/featured/featured-2.png';
 import featured_3 from '@assets/img/product/featured/featured-3.png';
+import { formatVND } from '@/utils/currency';
 
 
 
@@ -13,22 +14,22 @@ const featured_data = [
   {
     id: 1,
     img: featured_1,
-    title: <>Matte Liquid <br /> Lipstick & Lip Liner</>,
-    subtitle: 'Molestias internos et commodi tempora dolores sapiente sed iste.',
+    title: <>Son kem lì <br /> và chì viền môi</>,
+    subtitle: 'Sản phẩm được chọn lọc cho nhu cầu làm đẹp hằng ngày.',
     save: 72,
   },
   {
     id: 2,
     img: featured_2,
-    title: <>Crushed Liquid <br /> Lip  - Cherry Crush</>,
-    subtitle: 'Molestias internos et commodi tempora dolores sapiente sed iste.',
+    title: <>Son lì dạng kem <br /> tông màu đỏ rượu vang</>,
+    subtitle: 'Mức giá tốt cùng nhiều ưu đãi cho thành viên NY - MART.',
     save: 98,
   },
   {
     id: 3,
     img: featured_3,
-    title: <>Mega Waterproof <br /> Concealer  - 125 Bisque</>,
-    subtitle: 'Molestias internos et commodi tempora dolores sapiente sed iste.',
+    title: <>Che khuyết điểm <br /> chống nước bền màu</>,
+    subtitle: 'Giao nhanh và đổi trả dễ dàng trên toàn quốc.',
     save: 133,
   },
 ]
@@ -51,7 +52,7 @@ const BeautyFeatured = () => {
                     </h3>
                     <p>{item.subtitle}</p>
                     <div className="tp-featured-price-3">
-                      <span>Save ${item.save}</span>
+                      <span>Tiết kiệm đến {formatVND(item.save)}</span>
                     </div>
                   </div>
                 </div>

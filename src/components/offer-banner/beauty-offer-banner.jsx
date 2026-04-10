@@ -7,7 +7,7 @@ import Timer from '../common/timer';
 import Link from 'next/link';
 
 const BeautyOfferBanner = () => {
-  const expiryTimestamp = new Date('2023-8-16');
+  const expiryTimestamp = new Date('2026-12-31');
   const { seconds, minutes, hours, days } = useTimer({expiryTimestamp});
   return (
     <>
@@ -19,13 +19,13 @@ const BeautyOfferBanner = () => {
                     <div className="tp-collection-thumb include-bg include-bg transition-3" 
                     style={{backgroundImage:`url(${collection_thumb.src})`}}></div>
                     <div className="tp-collection-content">
-                        <span>Cosmetics Collection</span>
+                      <span>Bộ sưu tập ưu đãi NY - MART</span>
                         <h3 className="tp-collection-title">
-                          <Link href="/shop">Foundation and <br/> powder brush</Link>
+                          <Link href="/shop">Thời trang và gia dụng <br/> giá tốt mỗi ngày</Link>
                         </h3>
                         <div className="tp-collection-btn">
                           <Link href="/shop" className="tp-btn">
-                              Discover Now 
+                              Khám phá ngay 
                               {" "}<ArrowRightSmTwo/>
                           </Link>
                         </div>
@@ -37,10 +37,10 @@ const BeautyOfferBanner = () => {
                     <div className="tp-collection-thumb has-overlay include-bg transition-3" style={{backgroundImage:`url(${collection_thumb_2.src})`}} ></div>
                     <div className="tp-collection-content-1">
                         <h3 className="tp-collection-title-1">
-                          <Link href="/shop">Tops <br/> Blouse Shirts</Link>
+                          <Link href="/shop">Công nghệ và phụ kiện <br/> cho gia đình</Link>
                         </h3>
                         <div className="tp-collection-btn-1">
-                          <Link href="/shop" className="tp-link-btn-line">Shop Collection</Link>
+                          <Link href="/shop" className="tp-link-btn-line">Mua sắm ngay</Link>
                         </div>
                     </div>
                   </div>
@@ -49,7 +49,7 @@ const BeautyOfferBanner = () => {
             <div className="row justify-content-center">
               <div className="col-xl-3 col-lg-4 col-md-5">
                   <div className="tp-collection-offer-wrapper mt-20">
-                    <p>Discover our Beauty Selection <span>75% Extra Discount</span> for your...</p>
+                    <p>Ưu đãi lớn tại NY - MART <span>giảm đến 75%</span> cho đơn hàng hôm nay.</p>
                   </div>
               </div>
               <div className="col-xl-3 col-lg-4 col-md-5">
@@ -57,9 +57,9 @@ const BeautyOfferBanner = () => {
                     <div className="tp-product-countdown" data-countdown data-date="Sep 30 2024 20:20:22">
                         <div className="tp-product-countdown-inner">
                           <ul>
-                              <li><span>{days}</span> Days</li>
-                              <li><span>{hours}</span> Hrs</li>
-                              <li><span>{minutes}</span> Min</li>
+                              <li><span>{days}</span> Ngày</li>
+                              <li><span>{hours}</span> Giờ</li>
+                              <li><span>{minutes}</span> Phút</li>
                           </ul>
                           {/* <Timer expiryTimestamp={time} /> */}
                         </div>
@@ -67,7 +67,7 @@ const BeautyOfferBanner = () => {
                     <div className="tp-product-countdown has-second" data-countdown data-date="Sep 30 2024 20:20:22">
                         <div className="tp-product-countdown-inner">
                           <ul>
-                              <li><span suppressHydrationWarning>{seconds}</span> Sec</li>
+                              <li><span suppressHydrationWarning>{seconds}</span> Giây</li>
                           </ul>
                         </div>
                     </div>

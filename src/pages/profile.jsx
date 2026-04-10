@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 // internal
@@ -33,7 +33,7 @@ const ProfilePage = () => {
 
   return (
     <Wrapper>
-      <SEO pageTitle="Profile" />
+      <SEO pageTitle="Tài khoản" />
       <HeaderTwo style_2={true} />
       <ProfileArea orderData={orderData} />
       <Footer style_2={true} />
@@ -42,3 +42,5 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
+
+

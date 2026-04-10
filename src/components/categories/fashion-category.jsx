@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { useRouter } from "next/router";
 // internal
 import ErrorMsg from "../common/error-msg";
@@ -31,10 +31,10 @@ const FashionCategory = () => {
     content = <HomeTwoCateLoader loading={isLoading} />;
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && categories?.result?.length === 0) {
-    content = <ErrorMsg msg="No Category found!" />;
+    content = <ErrorMsg msg="Không tìm thấy danh mục!" />;
   }
   if (!isLoading && !isError && categories?.result?.length > 0) {
     const category_items = categories.result;
@@ -58,7 +58,7 @@ const FashionCategory = () => {
               onClick={() => handleCategoryRoute(item.parent)}
               className="cursor-pointer tp-btn tp-btn-border tp-btn-border-sm"
             >
-              Shop Now <ArrowRightLong />
+              Mua ngay <ArrowRightLong />
             </a>
           </div>
         </div>
@@ -77,3 +77,4 @@ const FashionCategory = () => {
 };
 
 export default FashionCategory;
+

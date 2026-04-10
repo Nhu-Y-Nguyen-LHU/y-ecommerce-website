@@ -14,8 +14,8 @@ const bannerProducts = [
   {
     id: 1,
     banner_bg_txt: 'tablet',
-    subtitle: 'Tablet Collection 2023',
-    title: 'Galaxy Tab S6 Lite Android Tablet',
+    subtitle: 'Bộ sưu tập máy tính bảng 2026',
+    title: 'Máy tính bảng Galaxy Tab S6 Lite Android',
     oldPrice: 320,
     newPrice: 288,
     img: banner_img_1,
@@ -23,8 +23,8 @@ const bannerProducts = [
   {
     id: 2,
     banner_bg_txt: 'tablet',
-    subtitle: 'Tablet Collection 2023',
-    title: 'Galaxy Tab S6 Lite Android Tablet',
+    subtitle: 'Bộ sưu tập máy tính bảng 2026',
+    title: 'Máy tính bảng Galaxy Tab S6 Lite Android',
     oldPrice: 320,
     newPrice: 288,
     img: banner_img_2,
@@ -32,24 +32,24 @@ const bannerProducts = [
   {
     id: 3,
     banner_bg_txt: 'tablet',
-    subtitle: 'Tablet Collection 2023',
-    title: 'Galaxy Tab S6 Lite Android Tablet',
+    subtitle: 'Bộ sưu tập máy tính bảng 2026',
+    title: 'Máy tính bảng Galaxy Tab S6 Lite Android',
     oldPrice: 320,
     newPrice: 288,
     img: banner_img_3,
   },
-]
+];
 
-// slider setting 
+// slider setting
 const slider_setting = {
   slidesPerView: 1,
   spaceBetween: 0,
   effect: 'fade',
   pagination: {
-    el: ".tp-product-banner-slider-dot",
+    el: '.tp-product-banner-slider-dot',
     clickable: true,
-  }
-}
+  },
+};
 
 const ProductBanner = () => {
   return (
@@ -58,7 +58,7 @@ const ProductBanner = () => {
         <div className="container">
           <div className="tp-product-banner-slider fix">
             <Swiper {...slider_setting} modules={[Pagination, EffectFade]} className="tp-product-banner-slider-active swiper-container">
-              {bannerProducts.map((item, i) => (
+              {bannerProducts.map((item) => (
                 <SwiperSlide key={item.id} className="tp-product-banner-inner theme-bg p-relative z-index-1 fix">
                   <h4 className="tp-product-banner-bg-text">{item.banner_bg_txt}</h4>
                   <div className="row align-items-center">
@@ -71,7 +71,7 @@ const ProductBanner = () => {
                           <p className="new-price">${item.newPrice.toFixed(2)}</p>
                         </div>
                         <div className="tp-product-banner-btn">
-                          <Link href="/shop" className="tp-btn tp-btn-2">Shop now</Link>
+                          <Link href="/shop" className="tp-btn tp-btn-2">Mua ngay</Link>
                         </div>
                       </div>
                     </div>

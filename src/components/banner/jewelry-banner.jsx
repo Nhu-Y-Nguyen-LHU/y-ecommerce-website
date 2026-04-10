@@ -17,18 +17,18 @@ import Link from 'next/link';
 
 // slider data 
 const slider_data = [
-  { subtitle: 'The original', title: 'Shine bright', img: slider_img_1 },
-  { subtitle: 'The original', title: 'Creative Design', img: slider_img_2 },
-  { subtitle: 'The original', title: 'Gold Plateted', img: slider_img_3 },
-  { subtitle: 'The original', title: 'Unique shapes', img: slider_img_4 },
+  { subtitle: 'Bộ sưu tập chọn lọc', title: 'Phụ kiện thời trang nổi bật', img: slider_img_1 },
+  { subtitle: 'Bộ sưu tập chọn lọc', title: 'Thiết kế tinh tế cho người Việt', img: slider_img_2 },
+  { subtitle: 'Bộ sưu tập chọn lọc', title: 'Trang sức sang trọng', img: slider_img_3 },
+  { subtitle: 'Bộ sưu tập chọn lọc', title: 'Kiểu dáng độc đáo', img: slider_img_4 },
 ]
 
 // slider nav data
 const slider_nav_data = [
-  { icon: nav_icon_1, title: <>Ring <br />& Earring</> },
-  { icon: nav_icon_2, title: <>Bangles & <br />Bracelets</> },
-  { icon: nav_icon_3, title: <>Drop <br /> Necklaces</> },
-  { icon: nav_icon_4, title: <>Diamond <br /> Necklaces</> },
+  { icon: nav_icon_1, title: <>Nhẫn <br /> & Bông tai</> },
+  { icon: nav_icon_2, title: <>Lắc tay <br /> & Vòng tay</> },
+  { icon: nav_icon_3, title: <>Dây chuyền <br /> dáng dài</> },
+  { icon: nav_icon_4, title: <>Dây chuyền <br /> đính đá</> },
 ]
 
 const JewelryBanner = () => {
@@ -89,7 +89,7 @@ const JewelryBanner = () => {
                 <div className={`tp-slider-video transition-3 ${play?'full-width':''}`}>
 
                   <video loop>
-                    <source type="video/mp4" src="http://weblearnbd.net/tphtml/videos/shofy/jewellery-1.mp4#t=3" />
+                    <source type="video/mp4" src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" />
                   </video>
                 </div>
                 {/* <!-- video button --> */}
@@ -114,7 +114,7 @@ const JewelryBanner = () => {
                       <span>{item.subtitle}</span>
                       <h3 className="tp-slider-title-4">{item.title}</h3>
                       <div className="tp-slider-btn-4">
-                        <Link href="/shop" className="tp-btn tp-btn-border tp-btn-border-white">Discover Now</Link>
+                        <Link href="/shop" className="tp-btn tp-btn-border tp-btn-border-white">Khám phá ngay</Link>
                       </div>
                     </div>
                   </div>

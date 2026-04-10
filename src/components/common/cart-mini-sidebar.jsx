@@ -7,6 +7,7 @@ import useCartInfo from '@/hooks/use-cart-info';
 import RenderCartProgress from './render-cart-progress';
 import empty_cart_img from '@assets/img/product/cartmini/empty-cart.png';
 import { closeCartMini, remove_product } from '@/redux/features/cartSlice';
+import { formatVND } from '@/utils/currency';
 
 const CartMiniSidebar = () => {
   const { cart_products, cartMiniOpen } = useSelector((state) => state.cart);
@@ -29,7 +30,7 @@ const handleCloseCartMini = () => {
           <div className="cartmini__top-wrapper">
             <div className="cartmini__top p-relative">
               <div className="cartmini__top-title">
-                <h4>Shopping cart</h4>
+                <h4>Giỏ hàng</h4>
               </div>
               <div className="cartmini__close">
                 <button onClick={() => dispatch(closeCartMini())} type="button" className="cartmini__close-btn cartmini-close-btn">
@@ -53,7 +54,7 @@ const handleCloseCartMini = () => {
                       <Link href={`/product-details/${item._id}`}>{item.title}</Link>
                     </h5>
                     <div className="cartmini__price-wrapper">
-                      {item.discount > 0 ? <span className="cartmini__price">${(Number(item.price) - (Number(item.price) * Number(item.discount)) / 100).toFixed(2)}</span> : <span className="cartmini__price">${item.price.toFixed(2)}</span>}
+                      {item.discount > 0 ? <span className="cartmini__price">{formatVND(Number(item.price) - (Number(item.price) * Number(item.discount)) / 100)}</span> : <span className="cartmini__price">{formatVND(item.price)}</span>}
                       <span className="cartmini__quantity">{" "}x{item.orderQuantity}</span>
                     </div>
                   </div>
@@ -64,18 +65,18 @@ const handleCloseCartMini = () => {
             {/* if no item in cart */}
             {cart_products.length === 0 && <div className="cartmini__empty text-center">
               <Image src={empty_cart_img} alt="empty-cart-img" />
-              <p>Your Cart is empty</p>
-              <Link href="/shop" className="tp-btn">Go to Shop</Link>
+              <p>Giỏ hàng của bạn đang trống</p>
+              <Link href="/shop" className="tp-btn">Mua sắm ngay</Link>
             </div>}
           </div>
           <div className="cartmini__checkout">
             <div className="cartmini__checkout-title mb-30">
-              <h4>Subtotal:</h4>
-              <span>${total.toFixed(2)}</span>
+              <h4>Tạm tính:</h4>
+              <span>{formatVND(total)}</span>
             </div>
             <div className="cartmini__checkout-btn">
-              <Link href="/cart" onClick={handleCloseCartMini} className="tp-btn mb-10 w-100"> view cart</Link>
-              <Link href="/checkout" onClick={handleCloseCartMini} className="tp-btn tp-btn-border w-100"> checkout</Link>
+              <Link href="/cart" onClick={handleCloseCartMini} className="tp-btn mb-10 w-100">Xem giỏ hàng</Link>
+              <Link href="/checkout" onClick={handleCloseCartMini} className="tp-btn tp-btn-border w-100">Thanh toán</Link>
             </div>
           </div>
         </div>

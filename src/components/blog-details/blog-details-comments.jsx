@@ -23,7 +23,7 @@ const BlogDetailsComments = () => {
                     </span>
                   </div>
                   <div className="tp-postbox-details-comment-reply">
-                    <a href="#">Reply</a>
+                    <a href="#">Phản hồi</a>
                   </div>
                 </div>
                 <p>{comment.desc}</p>
@@ -47,7 +47,7 @@ const BlogDetailsComments = () => {
                           </span>
                         </div>
                         <div className="tp-postbox-details-comment-reply">
-                          <a href="#">Reply</a>
+                          <a href="#">Phản hồi</a>
                         </div>
                       </div>
                       <p>{comment.children.desc}</p>

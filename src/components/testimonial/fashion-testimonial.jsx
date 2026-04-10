@@ -33,7 +33,7 @@ const FashionTestimonial = () => {
                 <div className="tp-testimonial-shape">
                   <span className="tp-testimonial-shape-gradient"></span>
                 </div>
-                <h3 className="tp-testimonial-section-title text-center">The Review Are In</h3>
+                <h3 className="tp-testimonial-section-title text-center">Khách hàng nói gì về NY - MART</h3>
                 <div className="row justify-content-center">
                   <div className="col-xl-8 col-lg-8 col-md-10">
 

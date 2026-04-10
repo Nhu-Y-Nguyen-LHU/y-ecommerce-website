@@ -1,10 +1,7 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 // internal
-import logo_white from '@assets/img/logo/logo-white.svg';
-import logo_dark from '@assets/img/logo/logo.svg';
 import { CartTwo, Menu, Search, Wishlist } from '@/svg';
 import Menus from './header-com/menus';
 import useSticky from '@/hooks/use-sticky';
@@ -13,6 +10,7 @@ import OffCanvas from '@/components/common/off-canvas';
 import CartMiniSidebar from '@/components/common/cart-mini-sidebar';
 import useCartInfo from '@/hooks/use-cart-info';
 import { openCartMini } from '@/redux/features/cartSlice';
+import BrandLogo from '@/components/common/brand-logo';
 
 const HeaderThree = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -30,10 +28,8 @@ const HeaderThree = () => {
               <div className="row align-items-center">
                 <div className="col-xl-2 col-lg-2 col-6">
                   <div className="logo">
-                    <Link href="/">
-                      <Image className="logo-light" src={logo_white} alt="logo" />
-                      <Image className="logo-dark" src={logo_dark} alt="logo" />
-                    </Link>
+                    <span className="logo-light"><BrandLogo /></span>
+                    <span className="logo-dark"><BrandLogo /></span>
                   </div>
                 </div>
                 <div className="col-xl-8 col-lg-8 d-none d-lg-block">

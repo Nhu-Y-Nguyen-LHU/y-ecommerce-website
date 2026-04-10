@@ -13,10 +13,10 @@ import { notifyError, notifySuccess } from "@/utils/toast";
 
 // schema
 const schema = Yup.object().shape({
-  password: Yup.string().required().min(6).label("Password"),
+  password: Yup.string().required().min(6).label("Mật khẩu"),
   confirmPassword: Yup.string().oneOf(
     [Yup.ref("password"), null],
-    "Passwords must match"
+    "Mật khẩu xác nhận chưa khớp"
   ),
 });
 
@@ -54,9 +54,9 @@ const ForgotPassword = ({ params }) => {
             <div className="col-xl-6 col-lg-8">
               <div className="tp-login-wrapper">
                 <div className="tp-login-top text-center mb-30">
-                  <h3 className="tp-login-title">Forget Password</h3>
+                  <h3 className="tp-login-title">Quên mật khẩu</h3>
                   <p>
-                    Reset Your Password
+                    Đặt lại mật khẩu của bạn
                   </p>
                 </div>
                 <div className="tp-login-option">
@@ -68,11 +68,11 @@ const ForgotPassword = ({ params }) => {
                         <div className="p-relative">
                           <div className="tp-login-input">
                             <input
-                              {...register("password", { required: `Password is required!` })}
+                              {...register("password", { required: `Vui lòng nhập mật khẩu!` })}
                               id="password"
                               name="password"
                               type={showPass ? "text" : "password"}
-                              placeholder="Min. 6 character"
+                              placeholder="Tối thiểu 6 ký tự"
                             />
                           </div>
                           <div className="tp-login-input-eye" id="password-show-toggle">
@@ -81,7 +81,7 @@ const ForgotPassword = ({ params }) => {
                             </span>
                           </div>
                           <div className="tp-login-input-title">
-                            <label htmlFor="password">Password</label>
+                            <label htmlFor="password">Mật khẩu</label>
                           </div>
                         </div>
                         <ErrorMsg msg={errors.password?.message} />
@@ -93,7 +93,7 @@ const ForgotPassword = ({ params }) => {
                             <input
                               {...register("confirmPassword")}
                               type={showConPass ? "text" : "password"}
-                              placeholder="Confirm Password"
+                              placeholder="Nhập lại mật khẩu"
                               name="confirmPassword"
                               id="confirmPassword"
                             />
@@ -104,7 +104,7 @@ const ForgotPassword = ({ params }) => {
                             </span>
                           </div>
                           <div className="tp-login-input-title">
-                            <label htmlFor="confirmPassword">Confirm Password</label>
+                            <label htmlFor="confirmPassword">Xác nhận mật khẩu</label>
                           </div>
                         </div>
                         <ErrorMsg msg={errors.confirmPassword?.message} />
@@ -113,7 +113,7 @@ const ForgotPassword = ({ params }) => {
 
                     <div className="tp-login-bottom">
                       <button type="submit" className="tp-login-btn w-100">
-                        Confirm password
+                        Xác nhận mật khẩu
                       </button>
                     </div>
                   </form>

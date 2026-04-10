@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar, Navigation,Autoplay } from "swiper";
 // internal
@@ -46,10 +46,10 @@ const RelatedProducts = ({id}) => {
     content = <HomeNewArrivalPrdLoader loading={isLoading}/>;
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No Products found!" />;
+    content = <ErrorMsg msg="Không tìm thấy sản phẩm!" />;
   }
   if (!isLoading && !isError && products?.data?.length > 0) {
     const product_items = products.data;
@@ -75,3 +75,4 @@ const RelatedProducts = ({id}) => {
 };
 
 export default RelatedProducts;
+

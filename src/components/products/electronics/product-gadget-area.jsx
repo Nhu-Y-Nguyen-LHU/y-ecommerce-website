@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Pagination } from 'swiper';
@@ -26,10 +26,10 @@ const ProductGadgetArea = () => {
     );
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No Products found!" />;
+    content = <ErrorMsg msg="Không tìm thấy sản phẩm!" />;
   }
   if (!isLoading && !isError && products?.data?.length > 0) {
     const product_items = products.data.slice(0, 6);
@@ -53,8 +53,8 @@ const ProductGadgetArea = () => {
     }
 
     const banner_data = [
-      { bg: b_bg_1, title: <>Selected novelty <br /> Products</>, price: 99 },
-      { bg: b_bg_2, title: <>Top Rated <br /> Products</>, price: 55 },
+      { bg: b_bg_1, title: <>Sản phẩm mới <br /> chọn lọc</>, price: 99 },
+      { bg: b_bg_2, title: <>Sản phẩm <br /> đánh giá cao</>, price: 55 },
     ]
     return (
       <Swiper {...settings} effect='fade' modules={[Pagination, EffectFade]} className="tp-product-gadget-banner-slider-active swiper-container">
@@ -62,7 +62,7 @@ const ProductGadgetArea = () => {
           <SwiperSlide key={i} className="tp-product-gadget-banner-item include-bg" 
           style={{ backgroundImage: `url(${b.bg.src})`}}>
             <div className="tp-product-gadget-banner-content">
-              <span className="tp-product-gadget-banner-price">Only ${b.price.toFixed(2)}</span>
+              <span className="tp-product-gadget-banner-price">Chỉ từ ${b.price.toFixed(2)}</span>
               <h3 className="tp-product-gadget-banner-title">
                 <Link href="/shop">{b.title}</Link>
               </h3>

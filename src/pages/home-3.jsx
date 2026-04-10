@@ -20,7 +20,7 @@ import Footer from "@/layout/footers/footer";
 const HomeThree = () => {
   return (
     <Wrapper>
-      <SEO pageTitle="Home Three" />
+      <SEO pageTitle="Trang chủ lam dep" />
       <Header/>
       <HomeHeroSlider/>
       <ElectronicCategory/>

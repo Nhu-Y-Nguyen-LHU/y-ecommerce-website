@@ -1,131 +1,111 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-// internal
-import social_data from '@/data/social-data';
-import { Email, Location } from '@/svg';
-import logo from '@assets/img/logo/logo.svg';
-import pay from '@assets/img/footer/footer-pay.png';
+import React from "react";
+import Image from "next/image";
+import social_data from "@/data/social-data";
+import { Email, Location } from "@/svg";
+import pay from "@assets/img/footer/footer-pay.png";
+import BrandLogo from "@/components/common/brand-logo";
 
 const FooterTwo = () => {
   return (
-    <>
-      <footer>
-        <div className="tp-footer-area tp-footer-style-2 tp-footer-style-3 tp-footer-style-4" data-bg-color="#F5F5F5" style={{ backgroundColor: `rgb(245, 245, 245)` }}>
-          <div className="tp-footer-top pt-95 pb-40">
-            <div className="container">
-              <div className="row">
-                <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                  <div className="tp-footer-widget footer-col-4-1 mb-50">
-                    <div className="tp-footer-logo">
-                      <Link href="/">
-                        <Image src={logo} alt="logo" />
-                      </Link>
+    <footer>
+      <div
+        className="tp-footer-area tp-footer-style-2 tp-footer-style-3 tp-footer-style-4"
+        data-bg-color="#F6F1F2"
+        style={{ backgroundColor: "rgb(246, 241, 242)" }}
+      >
+        <div className="tp-footer-top pt-95 pb-40">
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div className="tp-footer-widget footer-col-4-1 mb-50">
+                  <div className="tp-footer-logo">
+                    <BrandLogo />
+                  </div>
+                  <div className="tp-footer-widget-content">
+                    <div className="tp-footer-talk mb-20">
+                      <span>Cần hỗ trợ? Gọi ngay</span>
+                      <h4><a href="tel:1900636600">1900 636 600</a></h4>
                     </div>
-                    <div className="tp-footer-widget-content">
-                      <div className="tp-footer-talk mb-20">
-                        <span>Got Questions? Call us</span>
-                        <h4><a href="tel:670-413-90-762">+670 413 90 762</a></h4>
-                      </div>
-                      <div className="tp-footer-contact">
-                        <div className="tp-footer-contact-item d-flex align-items-start">
-                          <div className="tp-footer-contact-icon">
-                            <span>
-                              <Email />
-                            </span>
-                          </div>
-                          <div className="tp-footer-contact-content">
-                            <p><a href="mailto:shofy@support.com">shofy@mail.com</a></p>
-                          </div>
+                    <div className="tp-footer-contact">
+                      <div className="tp-footer-contact-item d-flex align-items-start">
+                        <div className="tp-footer-contact-icon">
+                          <span><Email /></span>
                         </div>
-                        <div className="tp-footer-contact-item d-flex align-items-start">
-                          <div className="tp-footer-contact-icon">
-                            <span>
-                              <Location />
-                            </span>
-                          </div>
-                          <div className="tp-footer-contact-content">
-                            <p><a href="https://www.google.com/maps/place/Sleepy+Hollow+Rd,+Gouverneur,+NY+13642,+USA/@44.3304966,-75.4552367,17z/data=!3m1!4b1!4m6!3m5!1s0x4cccddac8972c5eb:0x56286024afff537a!8m2!3d44.3304928!4d-75.453048!16s%2Fg%2F1tdsjdj4" target="_blank">79 Sleepy Hollow St. <br /> Jamaica, New York 1432</a></p>
-                          </div>
+                        <div className="tp-footer-contact-content">
+                          <p><a href="mailto:hotro@nymart.vn">hotro@nymart.vn</a></p>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                  <div className="tp-footer-widget footer-col-4-2 mb-50">
-                    <h4 className="tp-footer-widget-title">My Account</h4>
-                    <div className="tp-footer-widget-content">
-                      <ul>
-                        <li><a href="#">Track Orders</a></li>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Wishlist</a></li>
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">Order History</a></li>
-                        <li><a href="#">Returns</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-2 col-md-4 col-sm-5">
-                  <div className="tp-footer-widget footer-col-4-3 mb-50">
-                    <h4 className="tp-footer-widget-title">Infomation</h4>
-                    <div className="tp-footer-widget-content">
-                      <ul>
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Latest News</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xl-4 col-lg-4 col-md-6 col-sm-7">
-                  <div className="tp-footer-widget footer-col-4-4 mb-50">
-                    <h4 className="tp-footer-widget-title">Subcribe.</h4>
-                    <div className="tp-footer-widget-content">
-                      <div className="tp-footer-subscribe">
-                        <p>Our conversation is just getting started</p>
-                        <div className="tp-footer-subscribe-form mb-30">
-                          <form action="#">
-                            <div className="tp-footer-subscribe-input">
-                              <input type="email" placeholder="Enter Your Email" />
-                              <button type="submit">Subscribe</button>
-                            </div>
-                          </form>
+                      <div className="tp-footer-contact-item d-flex align-items-start">
+                        <div className="tp-footer-contact-icon">
+                          <span><Location /></span>
                         </div>
-                        <div className="tp-footer-social-4 tp-footer-social">
-                          <h4 className="tp-footer-social-title-4">Follow Us On</h4>
-                          {social_data.map(s => <a href={s.link} key={s.id} target="_blank">
-                            <i className={s.icon}></i>
-                          </a>
-                          )}
+                        <div className="tp-footer-contact-content">
+                          <p>
+                            <a href="https://maps.google.com" target="_blank" rel="noreferrer">
+                              Tầng 8, 123 Nguyễn Huệ <br />Q.1, TP. Hồ Chí Minh
+                            </a>
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="tp-footer-bottom">
-            <div className="container">
-              <div className="tp-footer-bottom-wrapper">
-                <div className="row align-items-center">
-                  <div className="col-md-6">
-                    <div className="tp-footer-copyright">
-                      <p>© {new Date().getFullYear()} All Rights Reserved  |  Next js Template by
-                        <Link href="/">ThemePure</Link>.
-                      </p>
-                    </div>
+
+              <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                <div className="tp-footer-widget footer-col-4-2 mb-50">
+                  <h4 className="tp-footer-widget-title">Tài khoản</h4>
+                  <div className="tp-footer-widget-content">
+                    <ul>
+                      <li><a href="#">Theo dõi đơn hàng</a></li>
+                      <li><a href="#">Vận chuyển</a></li>
+                      <li><a href="#">Yêu thích</a></li>
+                      <li><a href="#">Tài khoản của tôi</a></li>
+                      <li><a href="#">Lịch sử mua hàng</a></li>
+                      <li><a href="#">Đổi trả</a></li>
+                    </ul>
                   </div>
-                  <div className="col-md-6">
-                    <div className="tp-footer-payment text-md-end">
-                      <p>
-                        <Image src={pay} alt="pay" />
-                      </p>
+                </div>
+              </div>
+
+              <div className="col-xl-3 col-lg-2 col-md-4 col-sm-5">
+                <div className="tp-footer-widget footer-col-4-3 mb-50">
+                  <h4 className="tp-footer-widget-title">Thông tin</h4>
+                  <div className="tp-footer-widget-content">
+                    <ul>
+                      <li><a href="#">Câu chuyện thương hiệu</a></li>
+                      <li><a href="#">Tuyển dụng</a></li>
+                      <li><a href="#">Chính sách bảo mật</a></li>
+                      <li><a href="#">Điều khoản sử dụng</a></li>
+                      <li><a href="#">Tin tức mới</a></li>
+                      <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-xl-4 col-lg-4 col-md-6 col-sm-7">
+                <div className="tp-footer-widget footer-col-4-4 mb-50">
+                  <h4 className="tp-footer-widget-title">Đăng ký nhận tin</h4>
+                  <div className="tp-footer-widget-content">
+                    <div className="tp-footer-subscribe">
+                      <p>Nhận ưu đãi và xu hướng mua sắm mới nhất từ NY - MART.</p>
+                      <div className="tp-footer-subscribe-form mb-30">
+                        <form action="#">
+                          <div className="tp-footer-subscribe-input">
+                            <input type="email" placeholder="Nhập email của bạn" />
+                            <button type="submit">Đăng ký</button>
+                          </div>
+                        </form>
+                      </div>
+                      <div className="tp-footer-social-4 tp-footer-social">
+                        <h4 className="tp-footer-social-title-4">Theo dõi chúng tôi</h4>
+                        {social_data.map((s) => (
+                          <a href={s.link} key={s.id} target="_blank" rel="noreferrer">
+                            <i className={s.icon}></i>
+                          </a>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -133,8 +113,27 @@ const FooterTwo = () => {
             </div>
           </div>
         </div>
-      </footer>
-    </>
+
+        <div className="tp-footer-bottom">
+          <div className="container">
+            <div className="tp-footer-bottom-wrapper">
+              <div className="row align-items-center">
+                <div className="col-md-6">
+                  <div className="tp-footer-copyright">
+                    <p>© {new Date().getFullYear()} NY - MART. Bảo lưu mọi quyền.</p>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="tp-footer-payment text-md-end">
+                    <p><Image src={pay} alt="pay" /></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
 

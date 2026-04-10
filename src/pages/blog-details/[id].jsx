@@ -10,7 +10,7 @@ const BlogDetailsPage = ({query}) => {
   const blogItem = blogData.find(b => Number(b.id) === Number(query.id))
   return (
     <Wrapper>
-      <SEO pageTitle="Blog Details" />
+      <SEO pageTitle="Chi tiet tin tuc" />
       <HeaderTwo style_2={true} />
       <BlogDetailsArea blog={blogItem} />
       <Footer primary_style={true} />

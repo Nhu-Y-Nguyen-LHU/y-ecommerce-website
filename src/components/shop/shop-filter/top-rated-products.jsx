@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Image from 'next/image';
 import { Rating } from 'react-simple-star-rating';
 import Link from 'next/link';
@@ -18,10 +18,10 @@ const TopRatedProducts = () => {
     );
   }
   else if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   else if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No Products found!" />;
+    content = <ErrorMsg msg="Không tìm thấy sản phẩm!" />;
   }
   else if (!isLoading && !isError && products?.data?.length > 0) {
     const product_items = products.data.slice(0, 3);

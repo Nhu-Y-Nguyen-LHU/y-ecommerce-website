@@ -55,6 +55,30 @@
         }
     }
     &-style-transparent-white{
+        background-color: rgba($color: $white, $alpha: .9);
+        backdrop-filter: blur(6px);
+
+        &.tp-header-area .main-menu.menu-style-3 > nav > ul > li > a{
+            color: var(--tp-common-black) !important;
+        }
+
+        &.tp-header-area .main-menu.menu-style-3 ul li.has-dropdown > a::after {
+            color: var(--tp-common-black) !important;
+        }
+
+        &.tp-header-area .main-menu.menu-style-3 > nav > ul > li:hover > a,
+        &.tp-header-area .main-menu.menu-style-3 ul li.has-dropdown:hover > a::after {
+            color: var(--tp-theme-brown) !important;
+        }
+
+        .tp-menu-line{
+            background-color: var(--tp-common-black);
+        }
+
+        .tp-header-bottom-3{
+            border-bottom: 1px solid rgba($color: $black, $alpha: .12);
+        }
+
         #{$self}{
             &-action{
                 &-badge{

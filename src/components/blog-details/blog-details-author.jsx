@@ -16,14 +16,13 @@ const BlogDetailsAuthor = () => {
         </a>
       </div>
       <div className="tp-postbox-details-author-content">
-        <span>Written by</span>
+        <span>Được viết bởi</span>
         <h5 className="tp-postbox-details-author-title">
-          <a href="#">Theodore Handle</a>
+          <a href="#">Biên tập viên NY - MART</a>
         </h5>
         <p>
-          By defining and following internal and external processes, your team
-          will have clarity on resources to attract and retain customers for
-          your business.
+          Khi quy trình vận hành được thiết kế rõ ràng, đội ngũ sẽ phối hợp
+          hiệu quả hơn để thu hút, chăm sóc và giữ chân khách hàng bền vững.
         </p>
 
         <div className="tp-postbox-details-author-social">

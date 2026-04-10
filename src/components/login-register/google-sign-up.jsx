@@ -16,7 +16,7 @@ const GoogleSignUp = () => {
     if (user) {
       signUpProvider(user?.credential).then((res) => {
         if (res?.data) {
-          notifySuccess("Login success!");
+          notifySuccess("Đăng nhập thành công!");
           router.push(redirect || "/");
         } else {
           console.log("result error -->", res.error);
@@ -34,12 +34,12 @@ const GoogleSignUp = () => {
           disabled={renderProps.disabled}
         >
           <Image src={google_icon} alt="google_icon" />
-          Sign in with google
+          Đăng nhập với Google
         </a>
       )}
       onSuccess={handleGoogleSignIn}
       onFailure={(err) =>
-        notifyError(err?.message || "Something wrong on your auth setup!")
+        notifyError(err?.message || "Thiết lập xác thực đang có lỗi!")
       }
       cookiePolicy={"single_host_origin"}
     />

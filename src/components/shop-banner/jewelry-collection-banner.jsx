@@ -2,9 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 //internal
-import thumb_bg from '@assets/img/product/collection/4/collection-1.jpg';
+import thumb_bg from '@assets/img/banner/5/best-banner-1.jpg';
 import side_text from '@assets/img/product/collection/4/side-text.png';
-import collection_sm from '@assets/img/product/collection/4/collection-sm-1.jpg';
+import collection_sm from '@assets/img/product/product-11.jpg';
 import { ArrowRightSm, PlusTwo } from '@/svg';
 
 const JewelryCollectionBanner = () => {
@@ -19,15 +19,15 @@ const JewelryCollectionBanner = () => {
                   <div className="tp-collection-thumb-4 include-bg black-bg" 
                     style={{backgroundImage:`url(${thumb_bg.src})`}}>
                   </div>
-                  <span className="tp-collection-thumb-info-4">WITH NEW LOOK & NEW COLLECTION</span>
+                  <span className="tp-collection-thumb-info-4">DIỆN MẠO MỚI - BỘ SƯU TẬP MỚI</span>
 
                   <div className="tp-collection-hotspot-item tp-collection-hotspot-1">
                     <span className="tp-hotspot tp-pulse-border ">
                       <PlusTwo />
                     </span>
                     <div className="tp-collection-hotspot-content">
-                      <h3 className="tp-collection-hotspot-title">Skincare Product</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur.</p>
+                      <h3 className="tp-collection-hotspot-title">Sản phẩm chăm sóc da</h3>
+                      <p>Dịu nhẹ, phù hợp làn da châu Á.</p>
                     </div>
                   </div>
 
@@ -36,8 +36,8 @@ const JewelryCollectionBanner = () => {
                       <PlusTwo />
                     </span>
                     <div className="tp-collection-hotspot-content on-top">
-                      <h3 className="tp-collection-hotspot-title">Skincare Product</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur.</p>
+                      <h3 className="tp-collection-hotspot-title">Sản phẩm chăm sóc da</h3>
+                      <p>Thiết kế sang trọng, dễ phối.</p>
                     </div>
                   </div>
 
@@ -52,7 +52,7 @@ const JewelryCollectionBanner = () => {
                   <div className="row justify-content-center">
                     <div className="col-xl-6 col-lg-8">
                       <div className="tp-collection-item-4 text-center">
-                        <span className="tp-collection-subtitle-4">BUILD YOUR OWN SETS</span>
+                        <span className="tp-collection-subtitle-4">TỰ PHỐI BỘ THEO CÁCH CỦA BẠN</span>
                         <div className="tp-collection-thumb-banner-4 m-img">
                           <Link href="/shop">
                             <Image src={collection_sm} alt="collection_sm img" />
@@ -60,11 +60,11 @@ const JewelryCollectionBanner = () => {
                         </div>
                         <div className="tp-collection-content-4">
                           <h3 className="tp-collection-title-4">
-                            <Link href="/shop">Our finest jewelry</Link>
+                            <Link href="/shop">Trang sức tuyển chọn cao cấp</Link>
                           </h3>
                           <div className="tp-collection-btn-4">
                             <Link href="/shop" className="tp-link-btn-line-2">
-                              Shop this collection {" "} <ArrowRightSm />
+                              Xem bộ sưu tập {" "} <ArrowRightSm />
                             </Link>
                           </div>
                         </div>

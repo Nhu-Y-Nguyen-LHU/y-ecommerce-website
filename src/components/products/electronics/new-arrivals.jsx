@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation,Pagination } from 'swiper';
 // internal
@@ -50,10 +50,10 @@ const NewArrivals = () => {
     );
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No Products found!" />;
+    content = <ErrorMsg msg="Không tìm thấy sản phẩm!" />;
   }
   if (!isLoading && !isError && products?.data?.length > 0) {
     const product_items = products.data;
@@ -72,7 +72,7 @@ const NewArrivals = () => {
           <div className="row align-items-end">
             <div className="col-xl-5 col-sm-6">
               <div className="tp-section-title-wrapper mb-40">
-                <h3 className="tp-section-title">New Arrivals
+                <h3 className="tp-section-title">Sản phẩm mới
                   <ShapeLine />
                 </h3>
               </div>

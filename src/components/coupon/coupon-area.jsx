@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+﻿import React,{useState} from "react";
 import ErrorMsg from "../common/error-msg";
 import CouponItem from "./coupon-item";
 import { useGetOfferCouponsQuery } from "@/redux/features/coupon/couponApi";
@@ -25,7 +25,7 @@ const CouponArea = () => {
   }
 
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
 
   if (!isLoading && !isError && offerCoupons?.length === 0) {
@@ -58,3 +58,4 @@ const CouponArea = () => {
 };
 
 export default CouponArea;
+

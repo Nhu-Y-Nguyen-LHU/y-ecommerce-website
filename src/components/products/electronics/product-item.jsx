@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Rating } from "react-simple-star-rating";
@@ -70,7 +70,7 @@ const ProductItem = ({ product, offer_style = false }) => {
                   href="/cart"
                   className={`tp-product-action-btn ${isAddedToCart ? 'active' : ''} tp-product-add-cart-btn`}
                 >
-                  <Cart /> <span className="tp-product-tooltip">View Cart</span>
+                  <Cart /> <span className="tp-product-tooltip">Xem giỏ hàng</span>
                 </Link>
               ) : (
                 <button
@@ -81,7 +81,7 @@ const ProductItem = ({ product, offer_style = false }) => {
                 >
                   <Cart />
 
-                  <span className="tp-product-tooltip">Add to Cart</span>
+                  <span className="tp-product-tooltip">Them vao gio</span>
                 </button>
               )}
               <button
@@ -91,7 +91,7 @@ const ProductItem = ({ product, offer_style = false }) => {
               >
                 <QuickView />
 
-                <span className="tp-product-tooltip">Quick View</span>
+                <span className="tp-product-tooltip">Xem nhanh</span>
               </button>
               <button
                 type="button"
@@ -100,7 +100,7 @@ const ProductItem = ({ product, offer_style = false }) => {
                 disabled={status === 'out-of-stock'}
               >
                 <Wishlist />
-                <span className="tp-product-tooltip">Add To Wishlist</span>
+                <span className="tp-product-tooltip">Thêm yêu thích</span>
               </button>
             </div>
           </div>
@@ -171,3 +171,4 @@ const ProductItem = ({ product, offer_style = false }) => {
 };
 
 export default ProductItem;
+

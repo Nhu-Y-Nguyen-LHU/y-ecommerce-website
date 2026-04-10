@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 // internal
 import { ShapeLineSm } from '@/svg';
 import { useGetProductTypeQuery } from '@/redux/features/productApi';
@@ -17,10 +17,10 @@ const ProductSmArea = () => {
     );
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No Products found!" />;
+    content = <ErrorMsg msg="Không tìm thấy sản phẩm!" />;
   }
   if (!isLoading && !isError && products?.data?.length > 0) {
     const discount_prd = products.data.filter(p => p.discount > 0).slice(0, 3);
@@ -30,7 +30,7 @@ const ProductSmArea = () => {
       <div className="col-xl-4 col-md-6">
         <div className="tp-product-sm-list mb-50">
           <div className="tp-section-title-wrapper mb-40">
-            <h3 className="tp-section-title tp-section-title-sm">Discount Products
+            <h3 className="tp-section-title tp-section-title-sm">Sản phẩm giảm giá
               <ShapeLineSm />
             </h3>
           </div>

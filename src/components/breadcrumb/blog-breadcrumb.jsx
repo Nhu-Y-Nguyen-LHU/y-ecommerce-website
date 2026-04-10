@@ -11,12 +11,12 @@ const BlogBreadcrumb = () => {
         <div className="row">
           <div className="col-xxl-12">
             <div className="breadcrumb__content text-center p-relative z-index-1">
-              <h3 className="breadcrumb__title">Our Blog</h3>
+              <h3 className="breadcrumb__title">Tin tức va chia se</h3>
               <div className="breadcrumb__list">
                 <span>
-                  <a href="#">Home</a>
+                  <a href="#">Trang chủ</a>
                 </span>
-                <span>Blog</span>
+                <span>Tin tức</span>
               </div>
             </div>
           </div>

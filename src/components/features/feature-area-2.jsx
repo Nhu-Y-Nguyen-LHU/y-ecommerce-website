@@ -1,26 +1,26 @@
-import React from 'react';
+﻿import React from 'react';
 import { Delivery, Discount, Refund, Support } from '@/svg';
 
 export const feature_data = [
   {
     icon: <Delivery />,
-    title: 'Free Delivery',
-    subtitle: 'Orders from all item'
+    title: 'Giao hàng nhanh',
+    subtitle: 'Hỗ trợ giao toàn quốc'
   },
   {
     icon: <Refund />,
-    title: 'Return & Refund',
-    subtitle: 'Money back guarantee'
+    title: 'Đổi trả dễ dàng',
+    subtitle: 'Hoàn tiền theo chính sách'
   },
   {
     icon: <Discount />,
-    title: 'Member Discount',
-    subtitle: 'Onevery order over $140.00'
+    title: 'Ưu đãi thành viên',
+    subtitle: 'Nhiều mã giảm giá mỗi ngày'
   },
   {
     icon: <Support />,
-    title: 'Support 24/7',
-    subtitle: 'Contact us 24 hours a day'
+    title: 'Hỗ trợ 24/7',
+    subtitle: 'Tư vấn liên tục mỗi ngày'
   },
 ]
 
@@ -54,3 +54,4 @@ const FeatureAreaTwo = () => {
 };
 
 export default FeatureAreaTwo;
+

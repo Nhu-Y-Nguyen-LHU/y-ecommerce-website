@@ -1,5 +1,6 @@
 import React from "react";
 import useCartInfo from "@/hooks/use-cart-info";
+import { formatVND } from "@/utils/currency";
 
 const RenderCartProgress = () => {
   const { total } = useCartInfo();
@@ -9,9 +10,7 @@ const RenderCartProgress = () => {
     const remainingAmount = freeShippingThreshold - total;
     return (
       <>
-        <p>{`Add $${remainingAmount.toFixed(
-          2
-        )} more to qualify for free shipping`}</p>
+        <p>{`Thêm ${formatVND(remainingAmount)} để đủ điều kiện miễn phí vận chuyển`}</p>
         <div className="progress">
           <div
             className="progress-bar progress-bar-striped progress-bar-animated"
@@ -28,7 +27,7 @@ const RenderCartProgress = () => {
   }
   return (
     <>
-      <p> You are eligible for free shipping</p>
+      <p>Đơn hàng của bạn được miễn phí vận chuyển</p>
       <div className="progress">
         <div
           className="progress-bar progress-bar-striped progress-bar-animated"

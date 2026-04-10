@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
 import { Rating } from 'react-simple-star-rating';
@@ -48,10 +48,10 @@ const WeeksFeatured = () => {
     );
   }
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="Có lỗi xảy ra" />;
   }
   if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No Products found!" />;
+    content = <ErrorMsg msg="Không tìm thấy sản phẩm!" />;
   }
   if (!isLoading && !isError && products?.data?.length > 0) {
     const product_items = products.data;
@@ -82,7 +82,7 @@ const WeeksFeatured = () => {
                   <Rating allowFraction size={16} initialValue={reviews && reviews.length > 0 ? reviews.reduce((acc, review) => acc + review.rating, 0) / reviews.length : 0} readonly={true} />
                 </div>
                 <div className="tp-featured-btn">
-                  <Link href={`/product-details/${_id}`} className="tp-btn tp-btn-border tp-btn-border-sm">Shop Now
+                  <Link href={`/product-details/${_id}`} className="tp-btn tp-btn-border tp-btn-border-sm">Mua ngay
                     {" "}<ArrowRightLong />
                   </Link>
                 </div>
@@ -100,10 +100,10 @@ const WeeksFeatured = () => {
           <div className="col-xl-12">
             <div className="tp-section-title-wrapper-2 mb-50">
               <span className="tp-section-title-pre-2">
-                Shop by Featured
+                Mua sắm nổi bật
                 <TextShapeLine />
               </span>
-              <h3 className="tp-section-title-2">This {"Week's"} Featured</h3>
+              <h3 className="tp-section-title-2">Sản phẩm nổi bật tuần này</h3>
             </div>
           </div>
         </div>

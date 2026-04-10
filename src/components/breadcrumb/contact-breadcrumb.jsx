@@ -7,12 +7,12 @@ const ContactBreadcrumb = () => {
         <div className="row">
           <div className="col-xxl-12">
             <div className="breadcrumb__content p-relative z-index-1">
-              <h3 className="breadcrumb__title">Keep In Touch with Us</h3>
+              <h3 className="breadcrumb__title">Liên hệ voi chung toi</h3>
               <div className="breadcrumb__list">
                 <span>
-                  <a href="#">Home</a>
+                  <a href="#">Trang chủ</a>
                 </span>
-                <span>Contact</span>
+                <span>Liên hệ</span>
               </div>
             </div>
           </div>
